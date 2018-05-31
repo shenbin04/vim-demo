@@ -1,0 +1,57 @@
+VIM LEARNING
+
+- Bin
+
+# About
+
+  • Covers vim essentials <
+  • Covers typical use cases and tips <
+  • Does not make you a vim master (practice!) <
+  • Touches only small portion of vim power <
+  • Vim is just one part of the flow <
+
+# What is Vim?
+{{{text
+            _______ ________   _________   ______ _____ _____ _______ ____  _____
+    /\     |__   __|  ____\ \ / /__   __| |  ____|  __ \_   _|__   __/ __ \|  __ \
+   /  \       | |  | |__   \ V /   | |    | |__  | |  | || |    | | | |  | | |__) |
+  / /\ \      | |  |  __|   > <    | |    |  __| | |  | || |    | | | |  | |  _  /
+ / ____ \     | |  | |____ / . \   | |    | |____| |__| || |_   | | | |__| | | \ \
+/_/    \_\    |_|  |______/_/ \_\  |_|    |______|_____/_____|  |_|  \____/|_|  \_\
+}}}
+
+# Why Vim?
+
+  ## Efficiency <
+    • No mouse
+    • No ambiguity
+    • Powerful modal editing
+    • Designed for DRY
+
+  ## Performance <
+    • Lightweight
+
+  ## Customization <
+    • Config
+    • Plugin
+    • Script
+    • Integration
+
+  ## Documentation <
+    • Comprehensive documentation
+
+# How to start?
+
+  ## Touch typing <
+    The foundation
+
+  ## Vimtutor <
+    {{{sh $ vimtutor }}}
+
+  ## Minimal config <
+    {{{vim " .vimrc
+    set nocompatible
+    syntax on
+    filetype plugin indent on }}}
+
+# Thanks
