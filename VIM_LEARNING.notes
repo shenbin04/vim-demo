@@ -1,17 +1,19 @@
-VIM LEARNING
+*MASTER VIM THE EASY WAY*
 
 - Bin
 
 # About
 
-  • Covers vim essentials <
-  • Covers typical use cases and tips <
-  • Does not make you a vim master (practice!) <
-  • Touches only small portion of vim power <
+  • Covers Vim essentials <
+  • Covers many useful tips <
+  • Helps you to be a Vim master <
+  • Does NOT make you a Vim master (Practice!) <
+  • Covers only small portion of Vim's power <
   • Vim is just one part of the flow <
 
+
 # What is Vim?
-{{{text
+{{{ascii
             _______ ________   _________   ______ _____ _____ _______ ____  _____
     /\     |__   __|  ____\ \ / /__   __| |  ____|  __ \_   _|__   __/ __ \|  __ \
    /  \       | |  | |__   \ V /   | |    | |__  | |  | || |    | | | |  | | |__) |
@@ -26,7 +28,7 @@ VIM LEARNING
     • No mouse
     • No ambiguity
     • Powerful modal editing
-    • Designed for DRY
+    • Designed for DRY (_Don't Repeat Yourself_)
 
   ## Performance <
     • Lightweight
@@ -40,18 +42,54 @@ VIM LEARNING
   ## Documentation <
     • Comprehensive documentation
 
-# How to start?
+# How to Start?
 
-  ## Touch typing <
-    The foundation
+  ## Touch Typing <
+    • The foundation <
+    • Practice more for numbers and special characters
 
   ## Vimtutor <
-    {{{sh $ vimtutor }}}
+    • {{{sh $ vimtutor }}}
 
-  ## Minimal config <
+  ## Minimal Config <
+    • Minimal .vimrc config to start with
+
     {{{vim " .vimrc
     set nocompatible
     syntax on
     filetype plugin indent on }}}
+
+# How to Start?
+
+  ## The Very Essentials <
+
+  | Command            | Description                                 |
+  | ------------------ | ------------------------------------------- |
+  | *h*, *j*, *k*, *l*         | move left, down, up, right                  | <
+  | :w                 | write                                       | <
+  | :q                 | quit                                        | <
+  | :q!                | quit (discard changes)                      | <
+  | :e {file}          | edit file                                   | <
+  | :e {dir}           | open dir in file browser                    | <
+  | *w*                  | move to start of next word                  | <
+  | *b*                  | move to start of previous word              | <
+  | *$*                  | move to the end of current line             | <
+  | *0*                  | move to the beginning of current line       | <
+  | *^*                  | move to the first character of current line | <
+  | *gg*                 | move to the first line                      | <
+  | *G*                  | move to the last line                       | <
+  | {n}*gg*              | move to line {n}                            | <
+  | *<C-d>*              | move half page down                         | <
+  | *<C-u>*              | move half page up                           | <
+  | *i*                  | insert before                               | <
+  | *<ESC>*              | return to Normal mode                       | <
+  | *dd*                 | delete current line                         | <
+  | *dw*                 | delete until start of next word (exclusive) | <
+  | *u*                  | undo last edit                              | <
+  | *<C-r>*              | redo last edit                              | <
+  | *yy*                 | yank current line                           | <
+  | *p*                  | paste after                                 | <
+  | */*{pattern}*<CR>*     | search forward                              | <
+  | *:%s*/old/new/gc*<CR>* | replace                                     | <
 
 # Thanks
