@@ -66,16 +66,15 @@
   | Command            | Description                                 |
   | ------------------ | ------------------------------------------- |
   | *h*, *j*, *k*, *l*         | move left, down, up, right                  | <
-  | :w                 | write                                       | <
+  | :w                 | write to file                               | <
   | :q                 | quit                                        | <
   | :q!                | quit (discard changes)                      | <
   | :e {file}          | edit file                                   | <
   | :e {dir}           | open dir in file browser                    | <
-  | *w*                  | move to start of next word                  | <
-  | *b*                  | move to start of previous word              | <
+  | *w*                  | move to the start of next word              | <
+  | *b*                  | move to the start of previous word          | <
   | *$*                  | move to the end of current line             | <
   | *0*                  | move to the beginning of current line       | <
-  | *^*                  | move to the first character of current line | <
   | *gg*                 | move to the first line                      | <
   | *G*                  | move to the last line                       | <
   | {n}*gg*              | move to line {n}                            | <
