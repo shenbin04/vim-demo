@@ -321,3 +321,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:changes$ | list $changes history$                 | <
 
 # Thanks
+
+{{{ascii
+ QQQ   U   U EEEE  SSS  TTTTTT III  OOO  N   N  SSS   ???
+Q   Q  U   U E    S       TT    I  O   O NN  N S     ?   ?
+Q   Q  U   U EEE   SSS    TT    I  O   O N N N  SSS     ?
+Q  QQ  U   U E        S   TT    I  O   O N  NN     S   ?
+ QQQQ   UUU  EEEE SSSS    TT   III  OOO  N   N SSSS    ?
+     Q
+}}}
