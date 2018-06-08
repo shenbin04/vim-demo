@@ -1,4 +1,4 @@
-$MASTER VIM THE EASY WAY$
+$MASTER VIM THE PRACTICAL WAY$
 
 - Bin
 
@@ -13,13 +13,13 @@ $MASTER VIM THE EASY WAY$
 
 
 # What is Vim?
+
 {{{ascii
-            _______ ________   _________   ______ _____ _____ _______ ____  _____
-    /\     |__   __|  ____\ \ / /__   __| |  ____|  __ \_   _|__   __/ __ \|  __ \
-   /  \       | |  | |__   \ V /   | |    | |__  | |  | || |    | | | |  | | |__) |
-  / /\ \      | |  |  __|   > <    | |    |  __| | |  | || |    | | | |  | |  _  /
- / ____ \     | |  | |____ / . \   | |    | |____| |__| || |_   | | | |__| | | \ \
-/_/    \_\    |_|  |______/_/ \_\  |_|    |______|_____/_____|  |_|  \____/|_|  \_\
+TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
+  TT   E     X X    TT       E    D  D  I    TT   O   O R   R
+  TT   EEE    X     TT       EEE  D  D  I    TT   O   O RRRR
+  TT   E     X X    TT       E    D  D  I    TT   O   O R R
+  TT   EEEE X   X   TT       EEEE DDD  III   TT    OOO  R  RR
 }}}
 
 # Why Vim?
@@ -52,7 +52,7 @@ $MASTER VIM THE EASY WAY$
     • {{{sh $ vimtutor }}}
 
   ## Minimal Config <
-    • Minimal .vimrc config to start with
+    • Minimal %.vimrc% config to start with
 
     {{{vim " .vimrc
     set nocompatible
@@ -104,6 +104,14 @@ $MASTER VIM THE EASY WAY$
   • Config <
   • Plugin <
   • Script <
+
+# Key Takeaways
+
+  • $Count + Operator + Motion$ <
+
+  • $Don't Repeat Yourself$ <
+
+  • $Customize + Scripting$ <
 
 # Modes
 
