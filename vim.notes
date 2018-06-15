@@ -5,6 +5,7 @@ $MASTER VIM THE PRACTICAL WAY$
 # About
 
   • Covers Vim essentials <
+  • Covers more advanced Vim <
   • Covers many useful tips <
   • Helps you to be a Vim master <
   • Does NOT make you a Vim master (Practice!) <
@@ -61,35 +62,36 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # How to Start?
 
-  ## The Very Essentials <
+  • The very $essential commands$ to get started <
 
-  | Command          | Description                                 | <
-  | ---------------- | ------------------------------------------- |
-  | $h$, $j$, $k$, $l$       | move $left$, $down$, $up$, $right$                  | <
-  | :w               | $write$ to file                               | <
-  | :q               | $quit$                                        | <
-  | :q!              | $quit$ (discard changes)                      | <
-  | :e {file}        | $edit$ file                                   | <
-  | :e {dir}         | open $dir$ in file browser                    | <
-  | $w$                | move to the %next% $start of word$              | <
-  | $b$                | move to the %previous% $start of word$          | <
-  | $$$                | move to the $end of line$                     | <
-  | $0$                | move to the $beginning of line$               | <
-  | $gg$               | move to the $first line$                      | <
-  | $G$                | move to the $last line$                       | <
-  | [n]$gg$            | move to $line$ %{n}%                            | <
-  | $<C-d>$            | move $half page down$                         | <
-  | $<C-u>$            | move $half page up$                           | <
-  | $i$                | $insert$ %before%                               | <
-  | $<ESC>$            | return $to Normal mode$                       | <
-  | $dd$               | $delete$ %current line%                         | <
-  | $dw$               | $delete$ until %next start of word% (exclusive) | <
-  | $u$                | $undo$ last edit                              | <
-  | $<C-r>$            | $redo$ last edit                              | <
-  | $yy$               | $yank$ %current line%                           | <
-  | $p$                | $paste$ %after%                                 | <
-  | $/${p}$<CR>$         | $search$ forward                              | <
-  | $:%s$/old/new/[gc] | $substitute$ in file                          | <
+  | Command          | Description                                   | <
+  | ---------------- | --------------------------------------------- |
+  | $h$, $j$, $k$, $l$       | ^move^ %left%, %down%, %up%, %right%                    | <
+  | :w               | ^write^ to $file$                                 | <
+  | :q               | ^quit^ $window$                                   | <
+  | :q!              | ^quit^ $window$ (%discard changes%)                 | <
+  | :e {file}        | ^edit^ $file$ in window                           | <
+  | :e {dir}         | ^open^ $dir$ in file browser                      | <
+  | $w$                | ^move^ to the %next% $start of word$                | <
+  | $b$                | ^move^ to the %previous% $start of word$            | <
+  | $$$                | ^move^ to the $end of line$                       | <
+  | $0$                | ^move^ to the $beginning of line$                 | <
+  | $gg$               | ^move^ to the $first line$                        | <
+  | $G$                | ^move^ to the $last line$                         | <
+  | [n]$gg$            | ^move^ to $line$ %n%                                | <
+  | $<C-d>$            | ^move^ $half page$ %down%                           | <
+  | $<C-u>$            | ^move^ $half page$ %up%                             | <
+  | $i$                | ^insert^ %before%                                 | <
+  | $a$                | ^append^ %after%                                  | <
+  | $<ESC>$            | ^return^ to $Normal$ mode                         | <
+  | $dd$               | ^delete^ $current line$                           | <
+  | $dw$               | ^delete^ %until next% $start of word$ (exclusive)   | <
+  | $u$                | ^undo^ $last edit$                                | <
+  | $<C-r>$            | ^redo^ $last edit$                                | <
+  | $yy$               | ^yank^ $current line$                             | <
+  | $p$                | ^paste^ %after%                                   | <
+  | $/${pattern}$<CR>$   | ^search^ %forward% for ${pattern}$                  | <
+  | $:%s$/old/new/[gc] | ^substitute^ in $file$                            | <
 
 # Contents
 
