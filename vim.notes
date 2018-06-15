@@ -131,12 +131,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command                    | Description                     | <
   | -------------------------- | ------------------------------- |
-  | Normal + $a/A/C/i/I/o/O/s/S$ | switch to $Insert$ mode           | <
-  | Normal + $:$                 | switch to $Command-line$ mode     | <
-  | Normal + $v/V/<C-v>$         | switch to $Visual$ mode           | <
-  | Normal + $c/d/y/v$           | switch to $Operator-pending$ mode | <
-  | Normal + $R$                 | switch to $Replace$ mode          | <
-  | ANY + $<ESC>$                | back to $Normal$ mode             | <
+  | Normal + $a,A,C,i,I,o,O,s,S$ | ^switch^ to $Insert$ mode           | <
+  | Normal + $:,/,?$             | ^switch^ to $Command-line$ mode     | <
+  | Normal + $v,V,<C-v>$         | ^switch^ to $Visual$ mode           | <
+  | Normal + $c,d,y$             | ^switch^ to $Operator-pending$ mode | <
+  | Normal + $R$                 | ^switch^ to $Replace$ mode          | <
+  | ANY + $<ESC>$                | ^switch^ to $Normal$ mode           | <
 
 # Move
 
