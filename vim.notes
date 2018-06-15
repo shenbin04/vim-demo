@@ -323,6 +323,210 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $gi$       | ^insert^ at $last insert position$       | <
   | $:changes$ | ^list^ $changes history$                 | <
 
+# Edit > Edit in Normal mode
+
+  • Basic commands to edit text in $Normal$ mode only <
+
+  | Command        | Description                        | <
+  | -------------- | ---------------------------------- |
+  | [n]$x$           | ^delete^ $current character$           | <
+  | [n]$r${c}        | ^replace^ $current character$ with %{c}% | <
+  | [n]$dd$          | ^delete^ $current line$                | <
+  | [n]$D$           | ^delete^ to $end of current line$      | <
+  | [n]$d${%motion%}   | ^delete^ using %motion%                | <
+  | [n]$J$           | ^join^ $lines$                         | <
+
+# Edit > Enter Insert mode
+
+  • There are various ways to ^enter^ $Insert$ mode <
+  • Many of them have additional move benefits.
+
+  | Command | Description                             | <
+  | ------- | --------------------------------------- |
+  | $a$       | ^append^ %after% $cursor$                     | <
+  | $A$       | ^append^ %after% $end of line$                | <
+  | $i$       | ^insert^ %before% $cursor$                    | <
+  | $I$       | ^insert^ %before% $first non-blank character$ | <
+  | $o$       | ^insert^ %below% $line$                       | <
+  | $O$       | ^insert^ %above% $line$                       | <
+  | $s$       | ^change^ %current% $character$                | <
+  | $C$       | ^change^ %current% $line$                     | <
+  | $cc$      | ^change^ %current% $line$                     | <
+
+# Edit > Edit in Insert mode
+
+  • There are various ways to ^edit^ in $Insert$ mode <
+
+  | Command        | Description                                  | <
+  | -------------- | -------------------------------------------- |
+  | $typing$         | ^typing^ to edit                               | <
+  | $<BS>$           | ^delete^ %left%                                  | <
+  | $<DEL>$          | ^delete^ %right%                                 | <
+  | $<C-w>$          | ^delete^ %left% $a word$                           | <
+  | $<C-u>$          | ^delete^ %left to% $first non-blank word$          | <
+  | $<C-r>${reg}     | ^insert^ $register {reg}$                      | <
+  | $<C-r>=$         | ^insert^ $eval result of an expression$          | <
+  | $<C-v>${c}       | ^insert^ ${c}$ %literally%                         | <
+  | $<C-k>${digraph} | ^insert^ ${digraph}$                             | <
+  | $<C-o>$          | ^run^ $a Normal command$ and ^back^ to $Insert$ mode | <
+
+# Edit > Count + Operator + Motion
+
+  $Count$ + ^Operator^ + %Motion% <
+  • $Count$: an arbitrary number (_how many_) <
+  • ^Operator^: an action (_what_) <
+  • %Motion%: a descriptive (_where_) <
+
+# Edit > Operator
+
+  • ^Operator^: an action (_what to do_) <
+
+  | Command | Description  | <
+  | ------- | ------------ |
+  | $c$       | ^change^       | <
+  | $d$       | ^delete^       | <
+  | $y$       | ^yank^         | <
+  | $=$       | ^auto indent^  | <
+  | $>$       | ^indent^ %right% | <
+  | $<$       | ^indent^ %left%  | <
+  | $~$       | ^swap case^    | <
+  | $gu$      | ^lower case^   | <
+  | $gU$      | ^upper case^   | <
+
+# Edit > Motion
+
+  • %Motion%: a descriptive (_where_) <
+    ◦ $All move commands$ mentioned before (_almost_) <
+    ◦ $Text Object$ <
+
+# Edit > Text Object
+
+  • $Selection Mode$ <
+    ◦ $i$: %inside% (exclusive)
+    ◦ $a$: %around% (inclusive)
+
+  • $Text Objects$ <
+
+    | Command | Description    | <
+    | ------- | -------------- |
+    | $w$       | $word$           | <
+    | $W$       | $WORD$           | <
+    | $s$       | $sentence$       | <
+    | $p$       | $paragraph$      | <
+    | $t$       | $xml tag$        | <
+    | $'$       | $single quotes$  | <
+    | $"$       | $double quotes$  | <
+    | $`$       | $backticks$      | <
+    | $[$,$]$     | $brackets$       | <
+    | $($,$)$     | $parentheses$    | <
+    | ${$,$}$     | $braces$         | <
+    | $<$,$>$     | $angle brackets$ | <
+
+  • $Custom Text Objects$ <
+
+# Edit > Count + Operator + Motion
+
+  $Count$ + ^Operator^ + %Motion% <
+
+  • It is an atomic action and can be repeated using $.$ command <
+  • Let's see some examples <
+
+  | Command | Description             | <
+  | ------- | ----------------------- |
+  | $daw$     | ^delete^ %around% $word$      | <
+  | $dap$     | ^delete^ %around% $paragraph$ | <
+  | $cib$     | ^change^ %inside% $()$        | <
+  | $cit$     | ^change^ %inside% $tag$       | <
+  | $ct,$     | ^change^ %until% $,$          | <
+  | $yaB$     | ^yank^ %around% ${}$          | <
+
+# Edit > Registers
+
+  • Registers are the enhanced "clipboards" in Vim <
+
+  | Register | Description               | <
+  | -------- | ------------------------- |
+  | $"$        | %unnamed% (any last change) | <
+  | $0$        | %yank%                      | <
+  | $1$-$9$      | %delete% (1 is the newest)  | <
+  | ${a-z}$    | %named% $register$ (replace)  | <
+  | ${A-Z}$    | %named% $register$ (append)   | <
+  | $%$        | %current file%              | <
+  | $#$        | %alternative file%          | <
+  | $:$        | %last ex command%           | <
+  | $/$        | %last search%               | <
+  | $+$        | %system clipboard%          | <
+  | $*$        | %primary clipboard%         | <
+  | $.$        | %last inserted text%        | <
+  | $=$        | %expression%                | <
+  | $-$        | %small change% (in a line)  | <
+
+# Edit > Registers
+
+  • How to use registers <
+
+  | Command         | Description                                         | <
+  | --------------- | --------------------------------------------------- |
+  | $"${reg}$y${%motion%} | ^set^ $register {reg}$                                  | <
+  | $"${reg}$p$         | ^put^ $register {reg}$                                  | <
+  | $:reg$isters      | ^show^ $registers$                                      | <
+  | $<C-r>${reg}      | ^insert^ $register {reg}$ (in $Insert$/$Command-line$ mode) | <
+
+# Edit > Yank & Put
+
+  • Yank is "Copy" in Vim <
+  • Put is "Paste" in Vim
+
+  | Command           | Description               | <
+  | ----------------- | ------------------------- |
+  | [n]$yy$             | ^yank^ $line(s)$              | <
+  | [n]$Y$              | ^yank^ $line(s)$              | <
+  | [$"{reg}$]$y${%motion%} | ^yank^ to $register {reg}$    | <
+  | [$"{reg}$]$p$         | ^put^ $register {reg}$ %after%  | <
+  | [$"{reg}$]$P$         | ^put^ $register {reg}$ %before% | <
+
+# Edit > Yank & Put use cases
+
+  • $xp$ <
+    => ^swap^ $character$ <
+
+  • $ddp$ <
+    => ^swap^ $line$ <
+
+  • $yyp$ <
+    => ^duplicate^ $line$ <
+
+  • swap two adjacent words? <
+    => $dwwhp$ <
+    => $dww^P^$ <
+    => $d^e^wP^ldebh^P$ <
+    => $de^mm^wPlde^`m^P$ <
+    => $d^iw^mmwPlde`mP$ <
+
+# Edit > Undo & Redo
+
+  • Undo and Redo (revert undo) is common, but Vim gives us a more sophisticated one. <
+
+  | Command  | Description                       | <
+  | -------- | --------------------------------- |
+  | [n]$u$     | ^undo^ $change(s)$                    | <
+  | [n]$<C-r>$ | ^redo^ $changes(s)$                   | <
+  | $U$        | ^undo^ $all latest changes in a line$ | <
+
+# Edit > Undo Branchs
+
+  • Undos can $branch$ off <
+  • We can undo by time sequence <
+
+  | Command               | Description                                 | <
+  | --------------------- | ------------------------------------------- |
+  | [n]$g-$                 | ^go to^ %older% $state$                           | <
+  | [n]$g+$                 | ^go to^ %newer% $state$                           | <
+  | $:ea$rlier {n}          | ^go to^ %older% $state$                           | <
+  | $:ea$rlier {n}%s/m/h/d/f% | ^go to^ %older% $state$ about certain time %before% | <
+  | $:lat$er {n}            | ^go to^ %newer% $state$                           | <
+  | $:lat$er {n}%s/m/h/d/f%   | ^go to^ %newer% $state$ about certain time %after%  | <
+
 
 # Thanks
 
