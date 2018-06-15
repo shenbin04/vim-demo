@@ -527,6 +527,43 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:lat$er {n}            | ^go to^ %newer% $state$                           | <
   | $:lat$er {n}%s/m/h/d/f%   | ^go to^ %newer% $state$ about certain time %after%  | <
 
+# Visual > Enter Visual mode
+
+  • There are three ways to enter slightly different $Visual$ mode <
+
+  | Command | Description                      | <
+  | ------- | -------------------------------- |
+  | $v$       | ^switch to^ %normal% $Visual$ mode     | <
+  | $V$       | ^switch to^ %line-wise% $Visual$ mode  | <
+  | $<C-v>$   | ^switch to^ %block-wise% $Visual$ mode | <
+
+  • These commands can be used to ^switch^ between different modes as well <
+
+  • We can ^reselect^ the $last visual selection$ using $gv$ <
+
+# Visual > Visual mode selection
+
+  • How can we select in $Visual$ mode? <
+
+  | Command  | Description                              | <
+  | -------- | ---------------------------------------- |
+  | ${motion}$ | ^change^ %current end% of $visual selection$   | <
+  | $o$        | ^select^ the %other end% of $visual selection$ | <
+
+# Visual > More Visual mode
+
+  • What we can do in $Visual$ mode? <
+
+  | Command | Description     | <
+  | ------- | --------------- |
+  | $d$       | ^delete^ selected | <
+  | $y$       | ^yank^ selected   | <
+  | $c$       | ^change^ selected | <
+  | $I$       | ^insert^ %before%   | <
+  | $A$       | ^append^ %after%    | <
+
+  • $^Operator^ + %Motions%$ is typically favorable over $Visual selection$ <
+
 
 # Thanks
 
