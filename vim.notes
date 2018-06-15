@@ -564,6 +564,72 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   • $^Operator^ + %Motions%$ is typically favorable over $Visual selection$ <
 
+# Command-line > Ex Command
+
+  • Use $:$ to initiate the command and $<CR>$ to execute <
+
+  | Command      | Description   | <
+  | ------------ | ------------- |
+  | $:$%{cmd}%       | ^enter^ $command$ | <
+  | $:e$dit {file} | ^edit^ $file$     | <
+  | $:w$rite       | ^write^ to $file$ | <
+  | $:so$urce      | ^source^ $script$ | <
+
+# Command-line > Ex Command History
+
+  • Quickly access to command history <
+
+  | Command      | Description                                       | <
+  | ------------ | ------------------------------------------------- |
+  | $:$%{cmd}%$<UP>$   | ^complete^ %previous matched% $command$ on $prefix$       | <
+  | $:$%{cmd}%$<DOWN>$ | ^complete^ %next matched% $command$ on $prefix$           | <
+  | $:$%{cmd}%$<C-p>$  | ^complete^ %previous% $command$                         | <
+  | $:$%{cmd}%$<C-n>$  | ^complete^ %next% $command$                             | <
+  | $q:$           | ^show^ $command-line window$                          | <
+  | $<C-f>$        | ^show^ $command-line window$ (from command-line mode) | <
+
+# Command-line > Ex Command for editing
+
+  • Ex commands for editing <
+
+  | Command                             | Description                          | <
+  | ----------------------------------- | ------------------------------------ |
+  | $:$[%range%]$d$elete[$reg$]                 | ^delete^ %range% to $reg$                  | <
+  | $:$[%range%]$y$ank[$reg$]                   | ^yank^ %range% to $reg$                    | <
+  | $:$[%line%]$pu$t[$reg$]                     | ^put^ $reg$ after %line%                   | <
+  | $:$[%range%]$co$py {$line$}                 | ^copy^ %range% after $line$                | <
+  | $:$[%range%]$t$ {$line$}                    | ^copy^ %range% after $line$                | <
+  | $:$[%range%]$m$ove {$line$}                 | ^move^ %range% after $line$                | <
+  | $:$[%range%]$j$oin                        | ^join^ $lines$ in %range%                  | <
+  | $:norm$al[%!%] {$cmd$}                    | ^run^ normal command                   | <
+  | $:$[%range%]$s$ubstitute/$pattern$/new/[gc] | ^substitute^ in %range% matching $pattern$ | <
+  | $:$[%range%]$g$lobal/$pattern$/[$cmd$]        | ^run^ $cmd$ in %range% matching $pattern$    | <
+
+# Command-line > Ex Command range
+
+  • What is a $range$ ? <
+
+  | Command           | Description           | <
+  | ----------------- | --------------------- |
+  | $:%n%$                | $line$ %n%                | <
+  | $:+%n%$               | the %next nth% $line$     | <
+  | $:-%n%$               | the %previous nth% $line$ | <
+  | $:.$                | %current% $line$          | <
+  | $:^$                | %first% $line$            | <
+  | $:$$                | %last% $line$             | <
+  | $:${%start%}$,${%end%}    | from %start% to %end%     | <
+  | $:%/{/+1%,%/}/-1%${%cmd%} | use %search% and %offset% | <
+
+# Command-line > Ex Command shell
+
+  • Running shell in Vim is handy <
+
+  | Command         | Description                        | <
+  | --------------- | ---------------------------------- |
+  | $:!${$cmd$}         | ^run^ $shell cmd$                      | <
+  | $:!python %$      | ^run^ $python$ with current file       | <
+  | $:$[%range%]$r!${$cmd$} | ^run^ $cmd$ and insert output to %range% | <
+
 
 # Thanks
 
