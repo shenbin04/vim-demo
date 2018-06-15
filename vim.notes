@@ -630,6 +630,33 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:!python %$      | ^run^ $python$ with current file       | <
   | $:$[%range%]$r!${$cmd$} | ^run^ $cmd$ and insert output to %range% | <
 
+# Repeat > The . Command
+
+  • $.$ can ^repeat^ last change <
+  • $.$ can use $count$ <
+  • $.$ does %not% repeat command-line command <
+  • Idealy a change should be $Count$ + ^Operator^ + %Motion% <
+
+# Repeat > The . Command example
+
+  • delete word in sentence: This is no$t$ a test <
+    => $dbxx$ <
+    => $bdw$ <
+    => $daw$ <
+
+# Repeat > Macro
+
+  • Macro records all keystrokes in register and replay <
+
+  | Command    | Description            | <
+  | ---------- | ---------------------- |
+  | $q${$reg$}     | ^start^ record to $reg$    | <
+  | $q$          | ^stop^ record            | <
+  | $:reg$isters | ^show^ $registers$         | <
+  | [n]$@${$reg$}  | ^replay^ macro in $reg$    | <
+  | [n]$@@$      | ^replay^ %previous% macro  | <
+  | [n]$@:$      | ^replay^ %last% $Ex command$ | <
+
 
 # Thanks
 
