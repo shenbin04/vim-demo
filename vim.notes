@@ -141,10 +141,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Move
 
   • Moving around is one $crucial$ part of the flow when using Vim <
-  • Avoid using $arrow keys$ to move <
-  • Avoid move in $Insert$ mode <
-  • Better to avoid using %repeated% $h/j/k/l$ to move <
-  • Most moves can be repeated by $count$ <
+  • ^Avoid^ using $arrow keys$ to move <
+  • ^Avoid^ move in $Insert$ mode <
+  • Better to ^avoid^ using %repeated% $h/j/k/l$ to move <
+  • Most moves can be ^repeated^ by $count$ <
 
 # Move > Move by direction
 
@@ -152,10 +152,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description               | <
   | ------- | ------------------------- |
-  | [n]$h$    | move %n% $character(s) left$  | <
-  | [n]$j$    | move %n% $line(s) down$       | <
-  | [n]$k$    | move %n% $line(s) up$         | <
-  | [n]$l$    | move %n% $character(s) right$ | <
+  | [n]$h$    | ^move^ %n% $character(s)$ %left%  | <
+  | [n]$j$    | ^move^ %n% $line(s)$ %down%       | <
+  | [n]$k$    | ^move^ %n% $line(s)$ %up%         | <
+  | [n]$l$    | ^move^ %n% $character(s)$ %right% | <
 
 # Move > Move by word
 
@@ -165,32 +165,33 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
-  | [n]$w$    | move to the %nth next% $start of word$     | <
-  | [n]$b$    | move to the %nth previous% $start of word$ | <
-  | [n]$e$    | move to the %nth next% $end of word$       | <
-  | [n]$ge$   | move to the %nth previous% $end of word$   | <
+  | [n]$w$    | ^move^ to the %nth next% $start of word$     | <
+  | [n]$b$    | ^move^ to the %nth previous% $start of word$ | <
+  | [n]$e$    | ^move^ to the %nth next% $end of word$       | <
+  | [n]$ge$   | ^move^ to the %nth previous% $end of word$   | <
 
 # Move > Move by WORD
 
-  • A $WORD$ is a sequence of non-blank characters separated by white space. <
+  • A $WORD$ is a sequence of $non-blank characters$ separated by white space. <
   • Move by $WORD$ is preferred in certain cases.
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
-  | [n]$W$    | move to the %nth next% $start of WORD$     | <
-  | [n]$B$    | move to the %nth previous% $start of WORD$ | <
-  | [n]$E$    | move to the %nth next% $end of WORD$       | <
-  | [n]$gE$   | move to the %nth previous% $end of WORD$   | <
+  | [n]$W$    | ^move^ to the %nth next% $start of WORD$     | <
+  | [n]$B$    | ^move^ to the %nth previous% $start of WORD$ | <
+  | [n]$E$    | ^move^ to the %nth next% $end of WORD$       | <
+  | [n]$gE$   | ^move^ to the %nth previous% $end of WORD$   | <
 
 # Move > Move in line by line boundary
 
   • Move using $$$, $0$, $^$ is a quicker way to navigate to / between ends of current line. <
 
-  | Command | Description                                                  | <
-  | ------- | ------------------------------------------------------------ |
-  | [n]$$$    | move to the $end$ of %(n-1)th next% line                         | <
-  | $0$       | move to the $beginning$ of line                                | <
-  | $^$       | move to the $first non-blank character$ of line                | <
+  | Command | Description                                               | <
+  | ------- | --------------------------------------------------------- |
+  | $0$       | ^move^ to the $beginning$ of line                             | <
+  | $^$       | ^move^ to the $first non-blank character$ of line             | <
+  | [n]$$$    | ^move^ to the $end$ of %(n-1)th next% line                      | <
+  | [n]$g_$   | ^move^ to the $last non-blank character$ of %(n-1)th next% line | <
 
 # Move > Move in line by finding character
 
@@ -199,17 +200,17 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                                                      | <
   | ------- | ---------------------------------------------------------------- |
-  | [n]$f{c}$ | move %to% the %nth% $next occurrence$ of {c} in line                   | <
-  | [n]$t{c}$ | move %till% the %nth% $next occurrence$ of {c} in line (exclusive)     | <
-  | [n]$F{c}$ | move %to% the %nth% $previous occurrence$ of {c} in line               | <
-  | [n]$T{c}$ | move %till% the %nth% $previous occurrence$ of {c} in line (exclusive) | <
-  | [n]$;$    | $repeat$ last find %n times% in line                                 | <
-  | [n]$,$    | $repeat$ last find %n times% in line in %opposite direction%           | <
+  | [n]$f{c}$ | ^move^ %to% the %nth next% $occurrence of {c}$ in line                   | <
+  | [n]$t{c}$ | ^move^ %till% the %nth next% $occurrence of {c}$ in line (exclusive)     | <
+  | [n]$F{c}$ | ^move^ %to% the %nth previous% $occurrence of {c}$ in line               | <
+  | [n]$T{c}$ | ^move^ %till% the %nth previous% $occurrence of {c}$ in line (exclusive) | <
+  | [n]$;$    | ^repeat^ $last find$ %n times% in line                                 | <
+  | [n]$,$    | ^repeat^ $last find$ %n times% in line in %opposite direction%           | <
 
 # Move > Cursor and Window
 
   • $Cursor$ position vs $Window$ position <
-  • Vim always make sure cursor is $inside$ window <
+  • Vim always make sure cursor is %inside% window <
   • The window position depends on $scrolloff$ config <
 
 # Move > Move in file by line
@@ -218,74 +219,74 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description            | <
   | ------- | ---------------------- |
-  | $gg$      | move to the $first line$ | <
-  | $G$       | move to the $last line$  | <
-  | [n]$gg$   | move to $line$ %{n}%       | <
-  | [n]$G$    | move to $line$ %{n}%       | <
+  | $gg$      | ^move^ to the $first line$ | <
+  | $G$       | ^move^ to the $last line$  | <
+  | [n]$gg$   | ^move^ to $line$ %n%       | <
+  | [n]$G$    | ^move^ to $line$ %n%       | <
 
-# Move > Move by window
+# Move > Move by page
 
-  • Move faster by window <
+  • Move faster by $page$ <
   • More useful to $navigate$ rather than position
-  • Harder to interpret the exact position
+  • Harder to foresee the exact position
 
   | Command | Description                           | <
   | ------- | ------------------------------------- |
-  | $<C-d>$   | move cursor $half page down$            | <
-  | $<C-u>$   | move cursor $half page up$              | <
-  | $<C-f>$   | move %window% $one page down$             | <
-  | $<C-b>$   | move %window% $one page up$               | <
-  | $H$       | move cursor to $"first line"$ in %window% | <
-  | $M$       | move cursor to $middle line$ in %window%  | <
-  | $L$       | move cursor to $"last line"$ in %window%  | <
+  | $<C-d>$   | ^move^ $cursor$ %half page down%            | <
+  | $<C-u>$   | ^move^ $cursor$ %half page up%              | <
+  | $<C-f>$   | ^move^ $window$ %one page down%             | <
+  | $<C-b>$   | ^move^ $window$ %one page up%               | <
+  | $H$       | ^move^ $cursor$ to %"first line"% in $window$ | <
+  | $M$       | ^move^ $cursor$ to %middle line% in $window$  | <
+  | $L$       | ^move^ $cursor$ to %"last line"% in $window$  | <
 
 # Move > Move by object
 
-  • Move by sentence and paragraph <
+  • Move by $sentence$ and $paragraph$ <
 
   | Command | Description                                 | <
   | ------- | ------------------------------------------- |
-  | [n]$($    | move to the %beginning% of $previous sentence$  | <
-  | [n]$)$    | move to the %beginning% of $next sentence$      | <
-  | [n]${$    | move to the %beginning% of $previous paragraph$ | <
-  | [n]$}$    | move to the %beginning% of $next paragraph$     | <
+  | [n]$($    | ^move^ to the %beginning% of %previous% $sentence$  | <
+  | [n]$)$    | ^move^ to the %beginning% of %next% $sentence$      | <
+  | [n]${$    | ^move^ to the %beginning% of %previous% $paragraph$ | <
+  | [n]$}$    | ^move^ to the %beginning% of %next% $paragraph$     | <
 
 # Move > Move by search
 
-  • We can also use pattern search to move around <
+  • We can also use pattern $search$ to move around <
   • More in $Search$ section
 
-  | Command  | Description                           | <
-  | -------- | ------------------------------------- |
-  | $*$        | $search forward$ for %word% under cursor  | <
-  | $#$        | $search backward$ for %word% under cursor | <
-  | $/${p}$<CR>$ | $search forward$                        | <
-  | $?${p}$<CR>$ | $search backward$                       | <
-  | $n$        | move to the $next match$                | <
-  | $N$        | move to the $previous match$            | <
+  | Command        | Description                           | <
+  | -------------- | ------------------------------------- |
+  | $*$              | ^search^ %forward% for $word under cursor$  | <
+  | $#$              | ^search^ %backward% for $word under cursor$ | <
+  | $/${pattern}$<CR>$ | ^search^ %forward% for ${pattern}$          | <
+  | $?${pattern}$<CR>$ | ^search^ %backward% for pattern ${pattern}$ | <
+  | $n$              | ^move^ to the %next% $match$                | <
+  | $N$              | ^move^ to the %previous% $match$            | <
 
 # Move > Move by match
 
   • We can also move around using $([{$ semantics <
 
-  | Command | Description                                          | <
-  | ------- | ---------------------------------------------------- |
-  | $%$       | find $([{$ in line and move to the %matching close%      | <
-  | $[{$      | go to previous $unmatched {$ (%beginning% of code block) | <
-  | $]}$      | go to next $unmatched }$ (%end% of code block)           | <
-  | $[($      | go to previous $unmatched ($ (%beginning% of func param) | <
-  | $])$      | go to next $unmatched )$ (%end% of func param)           | <
+  | Command | Description                                                | <
+  | ------- | ---------------------------------------------------------- |
+  | $%$       | ^find^ $([{ in line$ and ^move^ to the $matching close$            | <
+  | $[{$      | ^go^ to %previous% $unmatched {$ (%beginning% of $outer code block$) | <
+  | $]}$      | ^go^ to %next% $unmatched }$ (%end% of $outer code block$)           | <
+  | $[($      | ^go^ to %previous% $unmatched ($ (%beginning% of $outer func param$) | <
+  | $])$      | ^go^ to %next% $unmatched )$ (%end% of $outer func param$)           | <
 
 # Move > Move by mark
 
-  • Mark is useful for remember a location <
-  • Take advantage of special marks
+  • Mark is useful for $remember$ a location <
+  • Take advantage of $special marks$
 
   | Command | Description                             | <
   | ------- | --------------------------------------- |
-  | $m${mark} | $add$ a mark                              | <
-  | $`${mark} | $goto$ a mark (%exact position%)            | <
-  | $'${mark} | $goto$ a mark (%first non-blank character%) | <
+  | $m${mark} | ^add^ a $mark$                              | <
+  | $`${mark} | ^goto^ a $mark$ (%exact position%)            | <
+  | $'${mark} | ^goto^ a $mark$ (%first non-blank character%) | <
 
   | Marks  | Description                              | <
   | ------ | ---------------------------------------- |
@@ -301,26 +302,27 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $<$      | %beginning% of $last visual select$          | <
   | $>$      | %end% of $last visual select$                | <
 
-# Move > Move by jump
+# Move > Move by jumps
 
   • $jumplist$ maintains jumps history, we can use it to jump back and forth <
 
   | Command | Description                        | <
   | ------- | ---------------------------------- |
-  | $<C-o>$   | jump to $older$ position in %jumplist% | <
-  | $<C-i>$   | jump to $newer$ position in %jumplist% | <
-  | $:jumps$  | list $jumps history$                 | <
+  | $<C-o>$   | ^jump^ to %older% position in $jumplist$ | <
+  | $<C-i>$   | ^jump^ to %newer% position in $jumplist$ | <
+  | $:jumps$  | ^list^ $jumps history$                 | <
 
-# Move > Move by change
+# Move > Move by changes
 
   • $changelist$ maintains changes history, we can use it to jump back and forth as well <
 
   | Command  | Description                          | <
   | -------- | ------------------------------------ |
-  | $g;$       | jump to $older$ position in %changelist% | <
-  | $g,$       | jump to $newer$ position in %changelist% | <
-  | $gi$       | %insert% at $last insert position$       | <
-  | $:changes$ | list $changes history$                 | <
+  | $g;$       | ^jump^ to %older% position in $changelist$ | <
+  | $g,$       | ^jump^ to %newer% position in $changelist$ | <
+  | $gi$       | ^insert^ at $last insert position$       | <
+  | $:changes$ | ^list^ $changes history$                 | <
+
 
 # Thanks
 
