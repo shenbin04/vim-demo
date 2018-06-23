@@ -235,7 +235,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • Vim always make sure cursor is %inside% window <
   • The window position depends on $scrolloff$ config <
 
-# Move > Move in file by line
+# Move > Move by line
 
   • Use $gg$ or $G$ to move to line <
 
@@ -310,19 +310,19 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $`${mark} | ^goto^ a $mark$ (%exact position%)            | <
   | $'${mark} | ^goto^ a $mark$ (%first non-blank character%) | <
 
-  | Marks  | Description                              | <
-  | ------ | ---------------------------------------- |
-  | ${a-z}$  | $local$ mark in file                       | <
-  | ${A-Z}$  | $global$ mark                              | <
-  | $.$      | $last edited$                              | <
-  | $'$      | $latest jump$                              | <
-  | $`$      | $latest jump$                              | <
-  | $"$      | $last position$ before leave buffer        | <
-  | $^$      | $last insert$ position                     | <
-  | $[$      | %beginning% of $last changed or yanked$ text | <
-  | $]$      | %end% of $last changed or yanked$ text       | <
-  | $<$      | %beginning% of $last visual select$          | <
-  | $>$      | %end% of $last visual select$                | <
+  | Marks | Description                              | <
+  | ----- | ---------------------------------------- |
+  | ${a-z}$ | $local$ mark in buffer                     | <
+  | ${A-Z}$ | $global$ mark                              | <
+  | $.$     | $last edited$                              | <
+  | $'$     | $latest jump$                              | <
+  | $`$     | $latest jump$                              | <
+  | $"$     | $last position$ before leave buffer        | <
+  | $^$     | $last insert$ position                     | <
+  | $[$     | %beginning% of $last changed or yanked$ text | <
+  | $]$     | %end% of $last changed or yanked$ text       | <
+  | $<$     | %beginning% of $last visual select$          | <
+  | $>$     | %end% of $last visual select$                | <
 
 # Move > Move by jumps
 
@@ -493,6 +493,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $"${reg}$p$         | ^put^ $register {reg}$                                  | <
   | $:reg$isters      | ^show^ $registers$                                      | <
   | $<C-r>${reg}      | ^insert^ $register {reg}$ (in $Insert$/$Command-line$ mode) | <
+  | $@${reg}          | ^insert^ $register {reg}$ in eval mode                  | <
 
 # Edit > Yank & Put
 
@@ -675,9 +676,9 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $q${$reg$}     | ^start^ record to $reg$    | <
   | $q$          | ^stop^ record            | <
   | $:reg$isters | ^show^ $registers$         | <
-  | [n]$@${$reg$}  | ^replay^ macro in $reg$    | <
-  | [n]$@@$      | ^replay^ %previous% macro  | <
-  | [n]$@:$      | ^replay^ %last% $Ex command$ | <
+  | [%n%]$@${$reg$}  | ^replay^ macro in $reg$    | <
+  | [%n%]$@@$      | ^replay^ %previous% macro  | <
+  | [%n%]$@:$      | ^replay^ %last% $Ex command$ | <
 
 
 # Thanks
