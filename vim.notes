@@ -174,10 +174,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description               | <
   | ------- | ------------------------- |
-  | [n]$h$    | ^move^ %n% $character(s)$ %left%  | <
-  | [n]$j$    | ^move^ %n% $line(s)$ %down%       | <
-  | [n]$k$    | ^move^ %n% $line(s)$ %up%         | <
-  | [n]$l$    | ^move^ %n% $character(s)$ %right% | <
+  | [%n%]$h$    | ^move^ %n% $character(s)$ %left%  | <
+  | [%n%]$j$    | ^move^ %n% $line(s)$ %down%       | <
+  | [%n%]$k$    | ^move^ %n% $line(s)$ %up%         | <
+  | [%n%]$l$    | ^move^ %n% $character(s)$ %right% | <
 
 # Move > Move by word
 
@@ -187,10 +187,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
-  | [n]$w$    | ^move^ to the %nth next% $start of word$     | <
-  | [n]$b$    | ^move^ to the %nth previous% $start of word$ | <
-  | [n]$e$    | ^move^ to the %nth next% $end of word$       | <
-  | [n]$ge$   | ^move^ to the %nth previous% $end of word$   | <
+  | [%n%]$w$    | ^move^ to the %nth next% $start of word$     | <
+  | [%n%]$b$    | ^move^ to the %nth previous% $start of word$ | <
+  | [%n%]$e$    | ^move^ to the %nth next% $end of word$       | <
+  | [%n%]$ge$   | ^move^ to the %nth previous% $end of word$   | <
 
 # Move > Move by WORD
 
@@ -199,10 +199,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
-  | [n]$W$    | ^move^ to the %nth next% $start of WORD$     | <
-  | [n]$B$    | ^move^ to the %nth previous% $start of WORD$ | <
-  | [n]$E$    | ^move^ to the %nth next% $end of WORD$       | <
-  | [n]$gE$   | ^move^ to the %nth previous% $end of WORD$   | <
+  | [%n%]$W$    | ^move^ to the %nth next% $start of WORD$     | <
+  | [%n%]$B$    | ^move^ to the %nth previous% $start of WORD$ | <
+  | [%n%]$E$    | ^move^ to the %nth next% $end of WORD$       | <
+  | [%n%]$gE$   | ^move^ to the %nth previous% $end of WORD$   | <
 
 # Move > Move in line by line boundary
 
@@ -212,8 +212,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ------- | --------------------------------------------------------- |
   | $0$       | ^move^ to the $beginning$ of line                             | <
   | $^$       | ^move^ to the $first non-blank character$ of line             | <
-  | [n]$$$    | ^move^ to the $end$ of %(n-1)th next% line                      | <
-  | [n]$g_$   | ^move^ to the $last non-blank character$ of %(n-1)th next% line | <
+  | [%n%]$$$    | ^move^ to the $end$ of %(n-1)th next% line                      | <
+  | [%n%]$g_$   | ^move^ to the $last non-blank character$ of %(n-1)th next% line | <
 
 # Move > Move in line by finding character
 
@@ -222,12 +222,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                                                      | <
   | ------- | ---------------------------------------------------------------- |
-  | [n]$f{c}$ | ^move^ %to% the %nth next% $occurrence of {c}$ in line                   | <
-  | [n]$t{c}$ | ^move^ %till% the %nth next% $occurrence of {c}$ in line (exclusive)     | <
-  | [n]$F{c}$ | ^move^ %to% the %nth previous% $occurrence of {c}$ in line               | <
-  | [n]$T{c}$ | ^move^ %till% the %nth previous% $occurrence of {c}$ in line (exclusive) | <
-  | [n]$;$    | ^repeat^ $last find$ %n times% in line                                 | <
-  | [n]$,$    | ^repeat^ $last find$ %n times% in line in %opposite direction%           | <
+  | [%n%]$f{c}$ | ^move^ %to% the %nth next% $occurrence of {c}$ in line                   | <
+  | [%n%]$t{c}$ | ^move^ %till% the %nth next% $occurrence of {c}$ in line (exclusive)     | <
+  | [%n%]$F{c}$ | ^move^ %to% the %nth previous% $occurrence of {c}$ in line               | <
+  | [%n%]$T{c}$ | ^move^ %till% the %nth previous% $occurrence of {c}$ in line (exclusive) | <
+  | [%n%]$;$    | ^repeat^ $last find$ %n times% in line                                 | <
+  | [%n%]$,$    | ^repeat^ $last find$ %n times% in line in %opposite direction%           | <
 
 # Move > Cursor and Window
 
@@ -243,8 +243,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ------- | ---------------------- |
   | $gg$      | ^move^ to the $first line$ | <
   | $G$       | ^move^ to the $last line$  | <
-  | [n]$gg$   | ^move^ to $line$ %n%       | <
-  | [n]$G$    | ^move^ to $line$ %n%       | <
+  | [%n%]$gg$   | ^move^ to $line$ %n%       | <
+  | [%n%]$G$    | ^move^ to $line$ %n%       | <
 
 # Move > Move by page
 
@@ -268,10 +268,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description                                 | <
   | ------- | ------------------------------------------- |
-  | [n]$($    | ^move^ to the %beginning% of %previous% $sentence$  | <
-  | [n]$)$    | ^move^ to the %beginning% of %next% $sentence$      | <
-  | [n]${$    | ^move^ to the %beginning% of %previous% $paragraph$ | <
-  | [n]$}$    | ^move^ to the %beginning% of %next% $paragraph$     | <
+  | [%n%]$($    | ^move^ to the %beginning% of %previous% $sentence$  | <
+  | [%n%]$)$    | ^move^ to the %beginning% of %next% $sentence$      | <
+  | [%n%]${$    | ^move^ to the %beginning% of %previous% $paragraph$ | <
+  | [%n%]$}$    | ^move^ to the %beginning% of %next% $paragraph$     | <
 
 # Move > Move by search
 
@@ -351,12 +351,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command        | Description                        | <
   | -------------- | ---------------------------------- |
-  | [n]$x$           | ^delete^ $current character$           | <
-  | [n]$r${c}        | ^replace^ $current character$ with %{c}% | <
-  | [n]$dd$          | ^delete^ $current line$                | <
-  | [n]$D$           | ^delete^ to $end of current line$      | <
-  | [n]$d${%motion%}   | ^delete^ using %motion%                | <
-  | [n]$J$           | ^join^ $lines$                         | <
+  | [%n%]$x$           | ^delete^ $current character$           | <
+  | [%n%]$r${c}        | ^replace^ $current character$ with %{c}% | <
+  | [%n%]$dd$          | ^delete^ $current line$                | <
+  | [%n%]$D$           | ^delete^ to $end of current line$      | <
+  | [%n%]$d${%motion%}   | ^delete^ using %motion%                | <
+  | [%n%]$J$           | ^join^ $lines$                         | <
 
 # Edit > Enter Insert mode
 
@@ -501,8 +501,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command           | Description               | <
   | ----------------- | ------------------------- |
-  | [n]$yy$             | ^yank^ $line(s)$              | <
-  | [n]$Y$              | ^yank^ $line(s)$              | <
+  | [%n%]$yy$             | ^yank^ $line(s)$              | <
+  | [%n%]$Y$              | ^yank^ $line(s)$              | <
   | [$"{reg}$]$y${%motion%} | ^yank^ to $register {reg}$    | <
   | [$"{reg}$]$p$         | ^put^ $register {reg}$ %after%  | <
   | [$"{reg}$]$P$         | ^put^ $register {reg}$ %before% | <
@@ -531,8 +531,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command  | Description                       | <
   | -------- | --------------------------------- |
-  | [n]$u$     | ^undo^ $change(s)$                    | <
-  | [n]$<C-r>$ | ^redo^ $changes(s)$                   | <
+  | [%n%]$u$     | ^undo^ $change(s)$                    | <
+  | [%n%]$<C-r>$ | ^redo^ $changes(s)$                   | <
   | $U$        | ^undo^ $all latest changes in a line$ | <
 
 # Edit > Undo Branchs
@@ -542,12 +542,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command               | Description                                 | <
   | --------------------- | ------------------------------------------- |
-  | [n]$g-$                 | ^go to^ %older% $state$                           | <
-  | [n]$g+$                 | ^go to^ %newer% $state$                           | <
-  | $:ea$rlier {n}          | ^go to^ %older% $state$                           | <
-  | $:ea$rlier {n}%s/m/h/d/f% | ^go to^ %older% $state$ about certain time %before% | <
-  | $:lat$er {n}            | ^go to^ %newer% $state$                           | <
-  | $:lat$er {n}%s/m/h/d/f%   | ^go to^ %newer% $state$ about certain time %after%  | <
+  | [%n%]$g-$                 | ^go to^ %older% $state$                           | <
+  | [%n%]$g+$                 | ^go to^ %newer% $state$                           | <
+  | $:ea$rlier {%n%}          | ^go to^ %older% $state$                           | <
+  | $:ea$rlier {%n%}%s/m/h/d/f% | ^go to^ %older% $state$ about certain time %before% | <
+  | $:lat$er {%n%}            | ^go to^ %newer% $state$                           | <
+  | $:lat$er {%n%}%s/m/h/d/f%   | ^go to^ %newer% $state$ about certain time %after%  | <
 
 # Visual > Enter Visual mode
 
