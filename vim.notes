@@ -849,6 +849,117 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     => sort lines inside matching braces <
     => {{{txt$:g/\v\{$\n\zs\_[^{]{-,}\ze^\s*\}/.+1,/}/-1sort}}}
 
+# Files > File
+
+  | Command        | Description                                   | <
+  | -------------- | --------------------------------------------- |
+  | $:e$dit {%file%}   | ^edit^ $file$ in window                           | <
+  | $:e$dit$!$         | ^read^ $file$ from disk (discard unsaved changes) | <
+  | $:w$rite[$!$]      | ^write^ to $file$ (override if using $!$)           | <
+  | $:wa$ll[$!$]       | ^write^ all to $file$ (override if using $!$)       | <
+  | $:sp$lit {%file%}  | ^edit^ $file$ in %horizontal% split                 | <
+  | $:vs$plit {%file%} | ^edit^ $file$ in %vertical% split                   | <
+
+# Files > Window
+
+  | Command               | Description                             | <
+  | --------------------- | --------------------------------------- |
+  | $<C-w>s$                | ^split^ $window$ %horizontally%               | <
+  | $<C-w>v$                | ^split^ $window$ %vertically%                 | <
+  | $<C-w>${$h$,$j$,$k$,$l$}        | ^move^ to %left%, %bottom%, %top%, %right% $window$ | <
+  | $<C-w>w$                | ^move^ to %next% $window$ (cycle)             | <
+  | $<C-w>c$, $:clo$se        | ^close^ %current% $window$                    | <
+  | $<C-w>o$, $:on$ly         | ^close^ %all other% $windows$                 | <
+  | $<C-w>$[%count%]{$+$,$-$,$<$,$>$} | ^expand/shrink^ %current% $window$            | <
+
+# Files > Tab
+
+  | Command                 | Description                            | <
+  | ----------------------- | -------------------------------------- |
+  | $:tabe$dit {%file%}         | ^edit^ $file$ in new $tab$                   | <
+  | $:tabn$ext [$id$] or [$id$]$gt$ | ^move^ to %next% $tab$ or $id$                 | <
+  | $:tabp$revious or $gT$      | ^move^ to %previous% $tab$                   | <
+  | $:tabc$lose               | ^close^ %current% $tab$                      | <
+  | $:tabo$nly                | ^close^ %all other% $tabs$                   | <
+  | $:tabm$ove [$id$]           | ^move^ $tab$ to $id$ (or to the end if omit) | <
+  | $<C-w>T$                  | ^move^ %current% $window$ to a $tab$           | <
+
+# Files > File vs Buffer vs Window vs Tab
+
+  ## For most editors
+  • File = [Buffer] = [Window] = [Tab]
+
+  ## For Vim
+  • $File$ is contents in %disk% (not a focus in Vim) <
+  • $Buffer$ is contents in %memory% (used a lot in Vim) <
+  • $Window$ is a %viewport%, or a %container% for a $Buffer$
+  • $Tab$ is a %group% of $Windows$
+
+# Files > Buffer List
+
+  • Buffer list maintains a list of opened buffers <
+  • Tends to be changed easily <
+
+  | Command         | Description                              | <
+  | --------------- | ---------------------------------------- |
+  | $:ls$, $:buffers$   | ^list^ all $buffers$                         | <
+  | $:bn$ext [%n%]      | ^goto^ %n%th %next% $buffer$ in buffer list      | <
+  | $:bp$revious [%n%]  | ^goto^ %n%th %previous% $buffer$ in buffer list  | <
+  | $:bf$irst         | ^goto^ %first% $buffer$ in buffer list         | <
+  | $:bl$alst         | ^goto^ %last% $buffer$ in buffer list          | <
+  | $:b$uffer{$id$}     | ^goto^ $buffer$ %id% in buffer list            | <
+  | $:bd$elete {$ids$}  | ^delete^ $buffers$ of %ids% in buffer list     | <
+  | $:$[%range%]$bd$elete | ^delete^ $buffers$ with %range% in buffer list | <
+
+# Files > Argument List
+
+  • Originated from starting Vim with multiple files <
+  • More stable and well defined <
+  • Normally a subset of buffer list <
+
+  | Command           | Description                               | <
+  | ----------------- | ----------------------------------------- |
+  | $vim$ {$pattern$}     | ^open^ Vim with argument list using $pattern$ | <
+  | $:ar$gs             | ^list^ argument list                        | <
+  | $:ar$gs {$pattern$}   | ^recreate^ argument list using $pattern$      | <
+  | $:$[%n%]$arga$dd [$file$] | ^add^ $file$ to argument list after %nth%       | <
+  | $:$[%n%]$n$ext          | ^goto^ %nth next% buffer in argument list     | <
+  | $:$[%n%]$prev$ious      | ^goto^ %nth previous% buffer in argument list | <
+  | $:fir$st            | ^goto^ %first% in argument list               | <
+  | $:la$st             | ^goto^ %last% in argument list                | <
+
+# Files > Quickfix List
+
+  • Quickfix list is designed for quickly navigating across different locations <
+  • Only $one$ global quickfix list <
+
+  | Command                   | Description                                         | <
+  | ------------------------- | --------------------------------------------------- |
+  | $:vim$grep {$pattern$} {$file$} | ^search^ for $pattern$ in $file$ and ^add^ to quickfix list | <
+  | $:cope$n                    | ^open^ quickfix list                                  | <
+  | $:ccl$ose                   | ^close^ quickfix list                                 | <
+  | $:$[%n%]$cn$ext                 | ^goto^ %nth next% $entry$ in quickfix list                | <
+  | $:$[%n%]$cp$revious             | ^goto^ %nth previous% $entry$ in quickfix list            | <
+  | $:$[%n%]$cnf$ile                | ^goto^ %nth next% $file$ in quickfix list                 | <
+  | $:$[%n%]$cpf$ile                | ^goto^ %nth previous% $file$ in quickfix list             | <
+  | $:cfir$st                   | ^goto^ %first% $entry$ in quickfix list                   | <
+  | $:cla$st                    | ^goto^ %last% $entry$ in quickfix list                    | <
+
+# Files > Rum command across collections
+
+  • We know how to run command in file <
+  • How can we run command in a collection of files? <
+
+  | Command             | Description                                  | <
+  | ------------------- | -------------------------------------------- |
+  | $:$[%range%]$bufdo$ {$cmd$} | ^run^ $cmd$ on %range% in $buffer list$              | <
+  | $:$[%range%]$argdo$ {$cmd$} | ^run^ $cmd$ on %range% in $argument list$            | <
+  | $:cdo$ {$cmd$}          | ^run^ $cmd$ on each $entry$ in $quickfix list$       | <
+  | $:cfdo$ {$cmd$}         | ^run^ $cmd$ on each $file$ in $quickfix list$        | <
+  | $:ldo$ {$cmd$}          | ^run^ $cmd$ on each $entry$ in $location list$       | <
+  | $:lfdo$ {$cmd$}         | ^run^ $cmd$ on each $file$ in $location list$        | <
+  | $:$[%range%]$windo$ {$cmd$} | ^run^ $cmd$ on %range% in $each window$              | <
+  | $:$[%range%]$tabdo$ {$cmd$} | ^run^ $cmd$ on %range% in $each tab$ (active window) | <
 
 # Thanks
 
