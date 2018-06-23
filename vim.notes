@@ -680,6 +680,175 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | [%n%]$@@$      | ^replay^ %previous% macro  | <
   | [%n%]$@:$      | ^replay^ %last% $Ex command$ | <
 
+# Repeat > Code Clinic
+
+  • Append ; to non-blank lines? <
+    ◦ $$$$a;$ => $.$ <
+    ◦ $A;$ => $.$ <
+    ◦ $qaA;<ESC>j$ => $[n]@a$ <
+    ◦ $$$$<C-v>[n]jA;$ <
+
+# Search > Search in buffer
+
+  • Recap <
+
+  | Command        | Description                           | <
+  | -------------- | ------------------------------------- |
+  | $*$              | ^search^ %forward% for $word under cursor$  | <
+  | $#$              | ^search^ %backward% for $word under cursor$ | <
+  | $/${pattern}$<CR>$ | ^search^ %forward% for ${pattern}$          | <
+  | $?${pattern}$<CR>$ | ^search^ %backward% for pattern ${pattern}$ | <
+  | $n$              | ^move^ to the %next% $match$                | <
+  | $N$              | ^move^ to the %previous% $match$            | <
+
+# Search > Search in buffer
+
+  • More search <
+
+  | Command        | Description                                            | <
+  | -------------- | ------------------------------------------------------ |
+  | $g*$             | ^search^ %forward% for $word under cursor$ without boundary  | <
+  | $g#$             | ^search^ %backward% for $word under cursor$ without boundary | <
+  | $/<CR>$          | ^repeat^ %last% $search$ (pattern only)                      | <
+  | $gn$             | ^repeat^ %last% $search$ %forward% and ^select^ $match$ in visual  | <
+  | $gN$             | ^repeat^ %last% $search$ %backward% and ^select^ $match$ in visual | <
+  | $:noh$lsearch    | ^hide^ $highlight$ once                                    | <
+  | $:set incsearch$ | ^show^ $highlight$ when typing                             | <
+  | $q/$             | ^show^ $search history$                                    | <
+
+# Search > Search mode
+
+  • $magic$ (default) <
+  • $very magic$ (matching character without backslash) <
+  • $very nomagic$ (matching character literally) <
+
+  | Command | Description       | <
+  | ------- | ----------------- |
+  | $\v$      | very magic mode   | <
+  | $\V$      | very nomagic mode | <
+
+# Search > Search mode example
+
+  • $#AA0BB1 or #AA0$ <
+    => /#\([0-9a-fA-F]\{6}\|[0-9a-fA-F]\{3}\) <
+    => /\v#([0-9a-fA-F]{6}|[0-9a-fA-F]{3}) <
+    => /\v#(\x{6}|\x{3}) <
+
+  • $a.k.a.$ but not $backward$ <
+    => /a\.k\.a\. <
+    => /\Va.k.a. <
+
+# Search > Offset
+
+  • We can add offset to search option <
+  • $/${pattern}/{%offset%}$<CR>$ <
+
+  | Option             | Description                                  | <
+  | ------------------ | -------------------------------------------- |
+  | ${n}$, $+{n}$, $-{n}$    | ^offset^ by $line$ (watch out for infinite loop) | <
+  | $b{n}$, $b+{n}$, $b-{n}$ | ^offset^ relative to the %beginning% of $match$    | <
+  | $s{n}$, $s+{n}$, $s-{n}$ | ^offset^ relative to the %start% of $match$        | <
+  | $e{n}$, $e+{n}$, $e-{n}$ | ^offset^ relative to the %end% of $match$          | <
+  | $;$                  | ^offset^ by $another search$                     | <
+
+# Search > Case match
+
+  • Config level case match <
+  • Match level case match override <
+
+  | Option     | Description                                  | <
+  | ---------- | -------------------------------------------- |
+  | $ignorecase$ | ^ignore^ case                                  | <
+  | $smartcase$  | ^use^ %smart% case                               | <
+  | $\c$         | ^ignore^ case (override ignorecase, smartcase) | <
+  | $\C$         | ^match^ case (override ignorecase, smartcase)  | <
+
+# Search > Match boundary
+
+  • Sometimes we want to match the whole pattern but only interested in part of it <
+
+  | Option | Description        | <
+  | ------ | ------------------ |
+  | $\zs$    | ^set^ %start% of $match$ | <
+  | $\ze$    | ^set^ %end% of $match$   | <
+
+  • $match string content only$ <
+    => /\v"\zs[^"]*\ze" <
+
+# Search > Multiple lines
+
+  • Sometimes we do want to match multiple lines <
+
+  | Option | Description               | <
+  | ------ | ------------------------- |
+  | $\_${c}  | pattern {c} + %end% of $line$ | <
+
+  • $match multi-line string$ <
+    => /\v"\_[^"]*" <
+
+# Search > Capture match
+
+  • Sometimes we want capture the match to use it for further purpose <
+
+  | Option | Description               | <
+  | ------ | ------------------------- |
+  | $()$     | ^capture^ match group       | <
+  | $%()$    | ^avoid capture^ match group | <
+
+  • $match any repeated words$ <
+    ◦ test test <
+    => /test test <
+    ◦ test   test <
+    => /%\v%test%\s+%test <
+    ◦ multiline <
+    => /\vtest(%\n%|\s)+test <
+    => /\vtest%\_s%+test <
+    ◦ atest testb <
+    => /\v%<%test\_s+test%>% <
+    ◦ test2 test2 <
+    => /\v<%(\w+)%\_s+%\1%> <
+    ◦ test test test <
+    => /\v<(\w+)%(%\_s+\1>%)+% <
+
+# Search > Substitute
+
+  • On top of search, we can do substitute <
+
+  | Command                         | Description                                       | <
+  | ------------------------------- | ------------------------------------------------- |
+  | $:$[%range%]$s$ubstitute/old/new/[%gc%] | ^substitute^ in $buffer$                                | <
+  | $:s$,$:&$,$&$                         | ^repeat^ last $substitute$ %without% options            | <
+  | $:&&$                             | ^repeat^ last $substitute$ %with% options               | <
+  | $g&$                              | ^repeat^ last $substitute$ %with% options for $all lines$ | <
+  | $:$[%range%]$s$ubstitute//new/[%gc%]    | ^substitute^ reusing $last search pattern$            | <
+
+# Search > Global
+
+  • On top of search, we can do global command <
+  • Select lines match with pattern (or negate) and run Ex command <
+
+  | Command                       | Description                           | <
+  | ----------------------------- | ------------------------------------- |
+  | $:$[%range%]$g$lobal/pattern/[%cmd%]  | ^run^ $cmd$ in %range% matching $pattern$     | <
+  | $:$[%range%]$v$lobal/pattern/[%cmd%]  | ^run^ $cmd$ in %range% %NOT% matching $pattern$ | <
+  | $:$[%range%]$g!$lobal/pattern/[%cmd%] | ^run^ $cmd$ in %range% %NOT% matching $pattern$ | <
+
+  • %range% by default is $%$
+  • %cmd% by default is $p$
+
+  • :g/bad <
+    => print all lines contain $bad$ <
+
+  • :g/bad/d <
+    => delete all lines contain $bad$ <
+
+  • :g!/good/d <
+    => keep all lines contain $good$ <
+
+  • :g/{/.+1,/}/-1sort <
+    => sort lines inside matching braces <
+    => {{{txt$:g/\v\{$\n\zs\_[^{]{-,}\ze^\s*\}/.+1,/}/-1sort}}}
+
 
 # Thanks
 
