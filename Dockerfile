@@ -7,8 +7,6 @@ RUN apt-get update
 RUN apt-get install -y neovim nodejs
 RUN git clone https://github.com/soweyln/zsh-config.git ~/.zsh && cd ~/.zsh && make install
 RUN git clone https://github.com/soweyln/vim-config.git ~/.vim && cd ~/.vim && make install
-RUN cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --tern-completer
-RUN cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && npm install --production
 RUN pip install --upgrade neovim
 WORKDIR /root/demo
 ENV TERM=xterm-256color
