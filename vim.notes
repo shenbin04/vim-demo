@@ -144,6 +144,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • Repeat
   • Search
   • Files
+  • Misc
+  • Config
+  • Plugin
+  • Script
   • Thanks
 
 # Modes
@@ -261,15 +265,18 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • More useful to $navigate$ rather than position
   • Harder to foresee the exact position
 
-  | Command | Description                           | <
-  | ------- | ------------------------------------- |
-  | $<C-d>$   | ^move^ $cursor$ %half page down%            | <
-  | $<C-u>$   | ^move^ $cursor$ %half page up%              | <
-  | $<C-f>$   | ^move^ $window$ %one page down%             | <
-  | $<C-b>$   | ^move^ $window$ %one page up%               | <
-  | $H$       | ^move^ $cursor$ to %"first line"% in $window$ | <
-  | $M$       | ^move^ $cursor$ to %middle line% in $window$  | <
-  | $L$       | ^move^ $cursor$ to %"last line"% in $window$  | <
+  | Command | Description                                                  | <
+  | ------- | ------------------------------------------------------------ |
+  | $<C-d>$   | ^move^ $cursor$ %half page down%                                   | <
+  | $<C-u>$   | ^move^ $cursor$ %half page up%                                     | <
+  | $<C-f>$   | ^scroll^ $window$ %one page down%                                  | <
+  | $<C-b>$   | ^scroll^ $window$ %one page up%                                    | <
+  | $H$       | ^move^ $cursor$ to the %"top"% of $window$                           | <
+  | $M$       | ^move^ $cursor$ to the %middle% of $window$                          | <
+  | $L$       | ^move^ $cursor$ to the %"bottom"% of $window$                        | <
+  | $zt$      | ^scroll^ $window$ to make current line to the %"top"% of $window$    | <
+  | $zz$      | ^scroll^ $window$ to make current line to the %"middle"% of $window$ | <
+  | $z-$      | ^scroll^ $window$ to make current line to the %"bottom"% of $window$ | <
 
 # Move > Move by object
 
@@ -691,11 +698,11 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # Repeat > Code Clinic
 
-  • Append ; to non-blank lines? <
-    ◦ $$$$a;$ => $.$ <
-    ◦ $A;$ => $.$ <
-    ◦ $qaA;<ESC>j$ => $[n]@a$ <
-    ◦ $$$$<C-v>[n]jA;$ <
+  • Append ; to all lines? <
+    => $$$$a;$ + $.$ <
+    => $A;$ + $.$ <
+    => $qaA;<ESC>j$ + $[n]@a$ <
+    => $$$$<C-v>[n]jA;$ <
 
 # Search > Search in buffer
 
@@ -920,6 +927,14 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:bd$elete {$ids$}  | ^delete^ $buffers$ of %ids% in buffer list     | <
   | $:$[%range%]$bd$elete | ^delete^ $buffers$ with %range% in buffer list | <
 
+  | Indicator | Description          | <
+  | --------- | -------------------- |
+  | $%$         | active window buffer | <
+  | $#$         | alternative buffer   | <
+  | $a$         | visible buffer       | <
+  | $h$         | hidden buffer        | <
+  | $+$         | modified buffer      | <
+
 # Files > Argument List
 
   • Originated from starting Vim with multiple files <
@@ -939,7 +954,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # Files > Quickfix List
 
-  • Quickfix list is designed for quickly navigating across different locations <
+  • Quickfix list is designed for navigating across different positions <
   • Only $one$ global quickfix list <
 
   | Command                   | Description                                         | <
@@ -953,6 +968,23 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:$[%n%]$cpf$ile                | ^goto^ %nth previous% $file$ in quickfix list             | <
   | $:cfir$st                   | ^goto^ %first% $entry$ in quickfix list                   | <
   | $:cla$st                    | ^goto^ %last% $entry$ in quickfix list                    | <
+
+# Files > Location List
+
+  • Location list is a variation of Quickfix List <
+  • Each window has one separate location list <
+
+  | Command                    | Description                                         | <
+  | -------------------------- | --------------------------------------------------- |
+  | $:lvim$grep {$pattern$} {$file$} | ^search^ for $pattern$ in $file$ and ^add^ to location list | <
+  | $:lop$en                     | ^open^ location list                                  | <
+  | $:lcl$ose                    | ^close^ location list                                 | <
+  | $:$[%n%]$lne$xt                  | ^goto^ %nth next% $entry$ in location list                | <
+  | $:$[%n%]$lp$revious              | ^goto^ %nth previous% $entry$ in location list            | <
+  | $:$[%n%]$lnf$ile                 | ^goto^ %nth next% $file$ in location list                 | <
+  | $:$[%n%]$lpf$ile                 | ^goto^ %nth previous% $file$ in location list             | <
+  | $:lfir$st                    | ^goto^ %first% $entry$ in location list                   | <
+  | $:lla$st                     | ^goto^ %last% $entry$ in location list                    | <
 
 # Files > Rum command across collections
 
