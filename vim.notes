@@ -32,6 +32,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     • Designed for DRY (_Don't Repeat Yourself_)
 
   ## Performance <
+    • Fast
     • Lightweight
 
   ## Customization <
@@ -41,7 +42,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     • Integration
 
   ## Documentation <
-    • Comprehensive documentation
+    • Comprehensive builtin documentation
 
 # How to Start?
 
@@ -50,7 +51,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     • Practice more for numbers and special characters
 
   ## Vimtutor <
-    • {{{sh $ vimtutor }}}
+    • $ vimtutor <
 
   ## Minimal Config <
     • Minimal %.vimrc% config to start with
@@ -59,6 +60,14 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     set nocompatible
     syntax on
     filetype plugin indent on }}}
+
+# How to Start?
+
+  ## Use Docker Image <
+    • Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) <
+    • Run $docker run -it --rm soweyln/vim$ <
+      ▸ Run $vim -u vimrc.min$ to use minimal config <
+      ▸ Run $vim$ to use full config <
 
 # How to Start?
 
