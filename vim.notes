@@ -1002,6 +1002,13 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:$[%range%]$windo$ {$cmd$} | ^run^ $cmd$ on %range% in $each window$              | <
   | $:$[%range%]$tabdo$ {$cmd$} | ^run^ $cmd$ on %range% in $each tab$ (active window) | <
 
+# Misc > Miscellaneous command
+
+  | Command  | Description                          | <
+  | -------- | ------------------------------------ |
+  | [%n%]$<C-a>$ | ^add^ %n% to $number at/after cursor$      | <
+  | [%n%]$<C-x>$ | ^subtract^ %n% to $number at/after cursor$ | <
+
 # Thanks
 
 {{{ascii
