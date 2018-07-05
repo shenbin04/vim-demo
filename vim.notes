@@ -1165,6 +1165,100 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     {{{vim nnoremap <Leader>cr :let @+=util#ExpandRelative('%:p')<CR>}}}
     => $,cr$ to copy current file with relative path to working dir to clipboard <
 
+# Plugin > Color Candies
+
+  | Plugin                           | Description                          | <
+  | -------------------------------- | ------------------------------------ |
+  | ^Plug^ $'nviennot/molokai'$          | %molokai% color scheme                 | <
+  | ^Plug^ $'pangloss/vim-javascript'$   | %javascript% file syntax highlighting  | <
+  | ^Plug^ $'mxw/vim-jsx'$               | %jsx% file syntax highlighting         | <
+  | ^Plug^ $'hail2u/vim-css3-syntax'$    | %css% file syntax highlighting         | <
+  | ^Plug^ $'cakebaker/scss-syntax.vim'$ | %scss% file syntax highlighting        | <
+  | ^Plug^ $'elzr/vim-json'$             | %json% file syntax highlighting        | <
+  | ^Plug^ $'vim-python/python-syntax'$  | %python% file syntax highlighting      | <
+  | ^Plug^ $'vim-ruby/vim-ruby'$         | %ruby% file syntax highlighting        | <
+  | ^Plug^ $'plasticboy/vim-markdown'$   | %markdown% file syntax highlighting    | <
+  | ^Plug^ $'solarnz/thrift.vim'$        | %thrift% file syntax highlighting      | <
+  | ^Plug^ $'keith/swift.vim'$           | %swift% file syntax highlighting       | <
+  | ^Plug^ $'b4winckler/vim-objc'$       | %objective c% file syntax highlighting | <
+  | ^Plug^ $'vim-scripts/nginx.vim'$     | %nginx% file syntax highlighting       | <
+
+# Plugin > New Era
+
+  | Plugin                                | Description                           | <
+  | ------------------------------------- | ------------------------------------- |
+  | ^Plug^ $'vim-airline/vim-airline'$        | %improved status line%                  | <
+  | ^Plug^ $'vim-airline/vim-airline-themes'$ | %airline themes%                        | <
+  | ^Plug^ $'sjl/gundo.vim'$                  | %visualize undo tree%                   | <
+  | ^Plug^ $'vim-scripts/YankRing.vim'$       | %history of yanks, changes and deletes% | <
+  | ^Plug^ $'scrooloose/nerdtree'$            | %improved tree explorer%                | <
+  | ^Plug^ $'majutsushi/tagbar'$              | %outline viewer%                        | <
+  | ^Plug^ $'yssl/QFEnter'$                   | %ways to open a quickfix list item%     |
+
+# Plugin > Find
+
+  | Plugin                                | Description                | <
+  | ------------------------------------- | -------------------------- |
+  | ^Plug^ $'ctrlpvim/ctrlp.vim'$             | %ctrlp fuzzy file finder%    | <
+  | ^Plug^ $'junegunn/fzf'$                   | %fzf file finder%            | <
+  | ^Plug^ $'junegunn/fzf.vim'$               | %fzf vim bindings%           | <
+  | ^Plug^ $'bronson/vim-visual-star-search'$ | %search for visual selction% | <
+  | ^Plug^ $'mhinz/vim-grepper'$              | %async search grep tool%     | <
+  | ^Plug^ $'tpope/vim-abolish'$              | %variants of a word%         | <
+  | ^Plug^ $'tpope/vim-unimpaired'$           | %pairs of mapping%           |
+
+# Plugin > Move
+
+  | Plugin                                 | Description                      | <
+  | -------------------------------------- | -------------------------------- |
+  | ^Plug^ $'easymotion/vim-easymotion'$       | %fancy (yet useful) way of motion% |
+  | ^Plug^ $'kana/vim-textobj-user'$           | %custom text object%               |
+  | ^Plug^ $'kana/vim-textobj-line'$           | %line text object%                 |
+  | ^Plug^ $'bps/vim-textobj-python'$          | %python text object%               |
+  | ^Plug^ $'michaeljsmith/vim-indent-object'$ | %indent text object%               |
+  | ^Plug^ $'terryma/vim-expand-region'$       | %expand/shrink visual selection%   |
+
+
+# Plugin > Edit
+
+  | Plugin                                | Description                   | <
+  | ------------------------------------- | ----------------------------- |
+  | ^Plug^ $'tpope/vim-surround'$             | %add, change or delete pairs%   |
+  | ^Plug^ $'Valloric/YouCompleteMe'$         | %autocomplete engine%           |
+  | ^Plug^ $'jiangmiao/auto-pairs'$           | %auto insert pairs%             |
+  | ^Plug^ $'alvan/vim-closetag'$             | %auto close end tag%            |
+  | ^Plug^ $'tpope/vim-endwise'$              | %auto close end token%          |
+  | ^Plug^ $'tpope/vim-commentary'$           | %comment%                       |
+  | ^Plug^ $'SirVer/ultisnips'$               | %snippets engine%               |
+  | ^Plug^ $'honza/vim-snippets'$             | %snippets library%              |
+  | ^Plug^ $'godlygeek/tabular'$              | %align text%                    |
+  | ^Plug^ $'millermedeiros/vim-esformatter'$ | %flexible javascript formatter% |
+  | ^Plug^ $'maksimr/vim-jsbeautify'$         | %javascript formatter%          |
+
+
+# Plugin > Integration
+
+  | Plugin                        | Description                            | <
+  | ----------------------------- | -------------------------------------- |
+  | ^Plug^ $'w0rp/ale'$               | %async lint engine%                      |
+  | ^Plug^ $'airblade/vim-gitgutter'$ | %git diff gutter visualizer%             |
+  | ^Plug^ $'tpope/vim-fugitive'$     | %best git wrapper ever%                  |
+  | ^Plug^ $'janko-m/vim-test'$       | %run your tests at the speed of thought% |
+  | ^Plug^ $'benmills/vimux'$         | %tmux integration%                       |
+
+# Plugin > Misc
+
+  | Plugin                               | Description               | <
+  | ------------------------------------ | ------------------------- |
+  | ^Plug^ $'machakann/vim-highlightedyank'$ | %highlight yanked%          |
+  | ^Plug^ $'xolox/vim-notes'$               | %note%                      |
+  | ^Plug^ $'tpope/vim-repeat'$              | %repeat . for plugin%       |
+  | ^Plug^ $'gerw/vim-HiLinkTrace'$          | %inspect syntax highlight%  |
+  | ^Plug^ $'ton/vim-bufsurf'$               | %buffer history per window% |
+  | ^Plug^ $'tmhedberg/SimpylFold'$          | %better python fold%        |
+  | ^Plug^ $'vim-scripts/L9'$                | %scripting utils%           |
+  | ^Plug^ $'xolox/vim-misc'$                | %scripting utils%           |
+
 # Thanks
 
 {{{ascii
