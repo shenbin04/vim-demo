@@ -1009,6 +1009,162 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | [%n%]$<C-a>$ | ^add^ %n% to $number at/after cursor$      | <
   | [%n%]$<C-x>$ | ^subtract^ %n% to $number at/after cursor$ | <
 
+# Config > Base
+
+  • Configurability is the core of Vim. <
+
+  | Option                    | Description                            | <
+  | ------------------------- | -------------------------------------- |
+  | $syntax on$                 | ^enable^ $syntax highlighting$             | <
+  | $filetype plugin indent on$ | ^enable^ $filetype with plugin and indent$ | <
+  | ^set^ $nocompatible$          | ^disable^ $compatible$ mode                | <
+
+# Config > Line Numbers
+
+  • A combination of %absolute% and %relative% line number <
+
+  | Config             | Description          | <
+  | ------------------ | -------------------- |
+  | ^set^ $number$         | ^show^ $line number$     | <
+  | ^set^ $relativenumber$ | ^show^ $relative number$ | <
+
+# Config > Cursor
+
+  • Show current cursor position <
+
+  | Config           | Description        | <
+  | ---------------- | ------------------ |
+  | ^set^ $cursorline$   | ^show^ $cursor line$   | <
+  | ^set^ $cursorcolumn$ | ^show^ $cursor column$ | <
+
+# Config > Whitespace
+
+  | Config                        | Description                                | <
+  | ----------------------------- | ------------------------------------------ |
+  | ^set^ $list$                      | show whitespaces                           |
+  | ^set^ $listchars=%tab:▸\ ,trail:•%$ | config characters to shown for whitespaces |
+
+# Config > Tab vs Space
+
+  | Config            | Description                                    | <
+  | ----------------- | ---------------------------------------------- |
+  | ^set^ $expandtab$     | spaces instead of tab                          | <
+  | ^set^ $tabstop=%2%$     | number of spaces a tab counts for              | <
+  | ^set^ $softtabstop=%2%$ | number of spaces a tab counts for when editing | <
+  | ^set^ $shiftwidth=%2%$  | number of spaces for indent                    | <
+
+# Config > Command-line Completion
+
+  | Config                         | Description                    | <
+  | ------------------------------ | ------------------------------ |
+  | ^set^ $wildmenu$                   | enable command-line completion | <
+  | ^set^ $wildmode=%list:longest,full%$ | completion mode                | <
+
+# Config > Search
+
+  | Config         | Description                                           | <
+  | -------------- | ----------------------------------------------------- |
+  | ^set^ $ignorecase$ | ignore case in search                                 |
+  | ^set^ $smartcase$  | match case if search pattern contains upper case char |
+  | ^set^ $hlsearch$   | highlight search matches                              |
+  | ^set^ $incsearch$  | highlight search matches when typing                  |
+
+# Config > Format
+
+  | Config               | Description                          | <
+  | -------------------- | ------------------------------------ |
+  | ^set^ $autoindent$       | copy indent when starting a new line | <
+  | ^set^ $textwidth=%120%$    | max width of text when editing       | <
+  | ^set^ $colorcolumn=%+1%$   | highlight column after 'textwidth'   | <
+  | ^set^ $formatoptions%-=t%$ | config automatic formatting          | <
+
+# Config > Undo
+
+  | Config                  | Description               | <
+  | ----------------------- | ------------------------- |
+  | ^set^ $undofile$            | save undo history in file |
+  | ^set^ $undodir=%~/.vim/undo%$ | undo file location        |
+  | ^set^ $undolevels=%1000%$     | undo level                |
+
+# Config > Misc
+
+  | Config                             | Description                                   | <
+  | ---------------------------------- | --------------------------------------------- |
+  | ^set^ $directory=%~/.vim/swap%$          | swap file location                            | <
+  | ^set^ $foldlevelstart=%99%$              | fold closed by default                        | <
+  | ^set^ $pastetoggle=%<F1>%$               | paste mode mapping                            | <
+  | ^set^ $scrolloff=%3%$                    | cursor off edge                               | <
+  | ^set^ $showmatch$                      | move to matching ({[ briefly when close match |
+  | ^set^ $viewoptions=%folds,cursor%$       | save folds and cursor for view                | <
+  | ^set^ $viminfo=%'100,/100,h,\"500,:500%$ | save & restore when Vim restart               |
+
+# Config > Abbreviation
+
+  | Config                         | Description  | <
+  | ------------------------------ | ------------ |
+  | ^ia^bbrev $bw baptiste, wstrasser$ | abbreviation |
+  | ^ia^bbrev $tihs this$              | abbreviation |
+
+# Config > Colorscheme
+
+  | Config                          | Description          | <
+  | ------------------------------- | -------------------- |
+  | ^colo^rscheme ${colorscheme}$       | use colorscheme      |
+  | ^hi^ghlight ${group} {key}={val}$   | set highlight group  |
+  | ^hi^ghlight $link {group} {target}$ | link highlight group |
+
+# Config > Key Mapping
+
+  • Key mapping is one of Vim's real power. <
+  • $<Leader>$ is a special key prefix. <
+
+  | Config                        | Description                      | <
+  | ----------------------------- | -------------------------------- |
+  | ^map^ ${keys} {target}$           | map for %any% mode                 |
+  | ^nmap^ ${keys} {target}$          | map for %Normal% mode              |
+  | ^vmap^ ${keys} {target}$          | map for %Visual% mode (and Select) |
+  | ^imap^ ${keys} {target}$          | map for %Insert% mode              |
+  | ^omap^ ${keys} {target}$          | map for %Operator-pending% mode    |
+  | ^cmap^ ${keys} {target}$          | map for %Command-line% mode        |
+  | {$mode$}^noremap^ ${keys} {target}$ | avoid recursive mapping          |
+  | {$mode$}^unmap^ ${keys}$            | remove mapping                   |
+  | let g:mapleader = ','         | set $,$ as $<Leader>$                |
+
+# Config > Key Mapping Examples
+
+  • {{{vim nnoremap <Leader>w :w<CR> <}}}
+    => $,w$ to save buffer to file <
+
+  • {{{vim nnoremap <C-j> <C-w>j <}}}
+    => $<C-j>$ to move to window below <
+
+  • {{{vim nnoremap <Leader>J <C-w>J <}}}
+    => $,j$ to move to window below current <
+
+  • {{{vim nnoremap \| :vsplit<CR> <}}}
+    => $|$ to virtically split current buffer <
+
+  • {{{vim nnoremap <C-d> <C-d>zz}}}
+    => $<C-d>$ to scroll half page down and center current line vertically in window <
+
+  • {{{vim nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'gj' <}}}
+    => $j$ to move down one virtual line <
+    => [%n%]$j$ to move down %n% virtual line(s) and last postion to jumplist <
+
+  • {{{vim onoremap <silent> i, :normal! t,vT,<CR>}}}
+    => Operator-pending map for text object between commas in a line. <
+       We can do things like $ci,$, $di,$ and $yi,$.
+    <
+  • {{{vim nnoremap <leader>cc "+y}}}
+    => $,cc$ + %motion% to copy to system clipboard <
+
+  • {{{vim nnoremap <Leader>cs :let @+=expand('\%:t')<CR>}}}
+    => $,cs$ to copy current file name to clipboard <
+    {{{vim nnoremap <Leader>cl :let @+=expand('%:p')<CR>}}}
+    => $,cl$ to copy current file with absolute path to clipboard <
+    {{{vim nnoremap <Leader>cr :let @+=util#ExpandRelative('%:p')<CR>}}}
+    => $,cr$ to copy current file with relative path to working dir to clipboard <
+
 # Thanks
 
 {{{ascii
