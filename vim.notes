@@ -1259,6 +1259,326 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'vim-scripts/L9'$                | %scripting utils%           |
   | ^Plug^ $'xolox/vim-misc'$                | %scripting utils%           |
 
+# Script > Intro
+
+  • Vim is powerful out of the box <
+  • Vim is even more powerful with $config$ and $plugins$ <
+  • Vim shines more with $scripting$ <
+
+# Script > Print
+
+  • $echo$ => print a message <
+    {{{vim echo 'Hello world'}}}
+  • $echom$ => print a message and persist <
+    {{{vim echom 'Hello world'}}}
+  • $mes$sages => show messages <
+    {{{vim echom 'Hello world'}}}
+
+# Script > Set Option
+
+  • $set$ => set option <
+    {{{vim set list}}}
+    {{{vim set nolist}}}
+    {{{vim set list!}}}
+    {{{vim set textwidth=120}}}
+    {{{vim set list?}}}
+
+  • $setlocal$ => set local option <
+    {{{vim setlocal list}}}
+
+# Script > Autocommmand
+
+  {{{vim autocmd BufWritePost *.vim source %}}}
+  ▸ BufWritePost => $event$ <
+  ▸ {{{txt *.vim}}} => $pattern$ <
+  ▸ source % => $command$ <
+  ▸ Automatically source the vim script after save <
+
+  {{{vim autocmd filetype python setlocal tabstop=4}}}
+  ▸ Set tabstop to 4 for python file <
+
+# Script > Normal & Execute
+
+  {{{vim normal gg}}}
+  {{{vim normal! gg}}}
+  {{{vim normal! /abc<CR>}}}
+  {{{vim execute 'normal! /abc\<CR>'}}}
+
+# Script > Variables
+
+  ## Variables <
+
+  {{{vim let a = 100}}}
+  {{{vim echo a}}}
+  {{{vim echo &textwidth}}}
+  {{{vim echo &wrap}}}
+  {{{vim set textwidth=a}}} ?
+  {{{vim let &textwidth = &textwidth + 20}}}
+  {{{vim let &l:textwidth = 120}}}
+  {{{vim echo @"}}}
+  {{{vim let @a = 'hi register a'}}}
+  {{{vim let g:a = 'hi global'}}}
+  {{{vim let s:a = 'hi script'}}}
+  {{{vim let b:a = 'hi local'}}}
+
+# Script > Logic
+
+  • $If$ <
+
+  {{{vim if 0
+    echo 'true'
+  elseif 'no'
+    echo 'elseif'
+  else
+    echo 'else'
+  endif}}}
+
+  • $Compare$ <
+
+  $==$ %depends% on config <
+  $==#$ case %sensitive% regardless of config <
+  $==?$ case %insensitive% regardless of config <
+
+# Script > Function
+
+  {{{vim function Hello()
+    return 'hello'
+  endfunction
+
+  call Hello()
+  echo Hello()}}}
+
+# Script > Function
+
+  {{{vim function Hello()
+    echo 'hello'
+  endfunction
+
+  call Hello()
+  echo Hello()}}}
+
+# Script > Function
+
+  {{{vim function Hello(name)
+    echo a:name
+  endfunction
+
+  call Hello('name')}}}
+
+# Script > Function
+
+  {{{vim function Hello(name, ...)
+    echo a:name
+    echo a:0
+    echo a:1
+    echo a:000
+  endfunction
+
+  call Hello('name', 'another', 'yet another')}}}
+
+# Script > Number
+
+  ## Number <
+
+  {{{vim echo 3 / 2}}}
+  {{{vim echo 3 / 2.0}}}
+  {{{vim echo 010}}}
+
+# Script > String
+
+  ## String <
+
+  {{{vim echo 'Hello ' + 'world'}}}
+  {{{vim echo 'Hello ' . 'world'}}}
+  {{{vim echo 'Hello \nworld'}}}
+  {{{vim echo "Hello \nworld"}}}
+
+# Script > String
+
+  ## Functions <
+
+  • $len$ => length of string in bytes <
+    {{{vim echo len('Hello world')}}}
+  • $strlen$ => length of string in bytes <
+    {{{vim echo strlen('Hello world')}}}
+
+  • $printf$ => format a string <
+    {{{vim echo printf('%s %s', 'Hello', 'world')}}}
+  • $expand$ => expand special keywords <
+    {{{vim echo expand('%:p')}}}
+  • $repeat$ => repeat a string by times <
+    {{{vim echo repeat('-', 10)}}}
+
+  • $split$ => split string to list <
+    {{{vim echo split('Hello world')}}}
+    {{{vim echo split('Hello,world', ',')}}}
+    {{{vim echo join(split('Hello world'), ',')}}}
+
+  • $tolower$ => make lowercase <
+    {{{vim echo tolower('Hello world')}}}
+  • $toupper$ => make uppercase <
+    {{{vim echo toupper('Hello world')}}}
+
+# Script > List
+
+  • $List$ <
+  {{{vim let list = ['hello', [1, 'world']]}}}
+
+  • $Index$ <
+  {{{vim echo ['hello', [1, 'world']][1]}}}
+  {{{vim echo ['hello', [1, 'world']][-1]}}}
+
+  • $Slice$ <
+  {{{vim echo ['a', 'b', 'c', 'd'][0:2]}}}
+  {{{vim echo ['a', 'b', 'c', 'd'][0:999]}}}
+  {{{vim echo ['a', 'b', 'c', 'd'][-2:-1]}}}
+  {{{vim echo ['a', 'b', 'c', 'd'][:2]}}}
+  {{{vim echo ['a', 'b', 'c', 'd'][1:]}}}
+
+  • $Concate$ <
+  {{{vim echo ['a', 'b'] + ['c']}}}
+
+  • $Unpack$ <
+  {{{vim let [v1, v2; rest] = ['a', 'b', 'c', 'd']}}}
+
+# Script > List
+
+  ## Functions <
+
+  • $len$ => length of list <
+    {{{vim echo len(['a', 'b', 'c'])}}}
+  • $empty$ => check if list is empty <
+    {{{vim echo empty(['a', 'b', 'c'])}}}
+
+  • $split$ => split string to list <
+    {{{vim echo split('a b c')}}}
+  • $join$ => join list into string <
+    {{{vim echo join(['a', 'b', 'c'], ',')}}}
+  • $range$ => list of numbers <
+    {{{vim echo range(1, 6, 2)}}}
+  • $repeat$ => repeat a list by times <
+    {{{vim echo repeat([1, 2], 3)}}}
+
+  • $get$ => get item by index <
+    {{{vim echo get(['a', 'b', 'c'], 0, 'default')}}}
+    {{{vim echo get(['a', 'b', 'c'], 999, 'default')}}}
+  • $index$ => index of value in list <
+    {{{vim echo index(['a', 'b', 'c'], 'a')}}}
+
+# Script > List
+
+  ## Functions
+
+  • $insert$ => insert item to list <
+    {{{vim echo insert(list, 'another')}}}
+    {{{vim echo insert(list, 'another', 2)}}}
+  • $add$ => append item to list <
+    {{{vim echo add(list, 'another')}}}
+    {{{vim echo add(list, [1, 2])}}}
+  • $extend$ => append list to list <
+    {{{vim echo extend(list, [1, 2])}}}
+  • $remove$ => remove items in list <
+    {{{vim echo remove(list, 1)}}}
+    {{{vim echo remove(list, 1, -1)}}}
+
+  • $reverse$ => reverse order of list <
+    {{{vim echo reverse(['a', 'b', 'c'])}}}
+  • $sort$ => sort list <
+    {{{vim echo sort(['a', 'c', 'b'])}}}
+  • $uniq$ => remove repeated adjacent items <
+    {{{vim echo uniq(['a', 'c', 'a'])}}}
+    {{{vim echo uniq(sort(['a', 'c', 'a']))}}}
+
+# Script > Loop
+
+  • $For$ <
+
+  {{{vim for i in [1, 2, 3]
+    echo i
+  endfor}}}
+
+  • $While$ <
+
+  {{{vim let a = 0
+  while a < 3
+    echo a
+    let a += 1
+  endwhile}}}
+
+# Script > Dictionary
+
+  ## Dictionary <
+
+  • $create$ <
+  {{{vim let dict = {'key': 1, 100: 'value'} }}}
+  • $assign$ <
+  {{{vim let dict.key = 'new value'}}}
+  {{{vim let dict.another = 'another value'}}}
+
+  ## Functions <
+
+  • $empty$ => check if dict is empty <
+    {{{vim echo empty(dict)}}}
+  • $len$ => number of items in dict <
+    {{{vim echo len(dict)}}}
+
+  • $has_key$ => check if a key in dict <
+    {{{vim echo has_key(dict, 'third')}}}
+  • $get$ => get value by key <
+    {{{vim echo get(dict, 'third', 'default')}}}
+  • $keys$ => get keys <
+    {{{vim echo keys(dict)}}}
+  • $values$ => get values <
+    {{{vim echo values(dict)}}}
+  • $items$ => get entries pair <
+    {{{vim echo items(dict)}}}
+
+  • $remove$ => remove entry from dict <
+    {{{vim echo remove(dict, 'key')}}}
+  • $extend$ => add entries to dict <
+    {{{vim echo extend(dict, {'key': 'val'})}}}
+
+# Script > Essential Functions
+
+  • $List and Dictionary$ <
+
+  | Function | Description               | <
+  | -------- | ------------------------- |
+  | $min$      | minimum value             | <
+  | $max$      | maximum value             | <
+  | $count$    | count of value appearance | <
+  | $copy$     | shallow copy              | <
+  | $deepcopy$ | deep copy                 | <
+  | $filter$   | select item               | <
+  | $map$      | change each item          | <
+
+# Script > Essential Functions
+
+  • $Cursor$ <
+
+  | Function | Description                  | <
+  | -------- | ---------------------------- |
+  | $line$     | line number of cursor/mark   | <
+  | $col$      | column number of cursor/mark | <
+  | $getpos$   | get postion of cursor/mark   | <
+  | $cursor$   | put cursor at line/column    | <
+  | $setpos$   | set postion of cursor/mark   | <
+
+# Script > Essential Functions
+
+  • $Buffer$ <
+
+  | Function     | Description                  | <
+  | ------------ | ---------------------------- |
+  | $getline$      | get lines from buffer        | <
+  | $setline$      | set lines in buffer          | <
+  | $append$       | append lines in buffer       | <
+  | $nextnonblank$ | find next non-blank line     | <
+  | $prevnonblank$ | find previous non-blank line | <
+  | $search$       | search for pattern           | <
+  | $searchpos$    | search for pattern           | <
+  | $searchpair$   | search for start-end pair    | <
+
 # Thanks
 
 {{{ascii
