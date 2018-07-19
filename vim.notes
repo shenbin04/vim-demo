@@ -1004,6 +1004,35 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:$[%range%]$windo$ {$cmd$} | ^run^ $cmd$ on %range% in $each window$              | <
   | $:$[%range%]$tabdo$ {$cmd$} | ^run^ $cmd$ on %range% in $each tab$ (active window) | <
 
+# Misc > Spell Checking
+
+  • Vim has built-in support for spell checking which can be useful <
+
+  | Command        | Description                              | <
+  | -------------- | ---------------------------------------- |
+  | $set spell$      | ^enable^ spell checking for current $window$ | <
+  | $setlocal spell$ | ^enable^ spell checking for current $buffer$ | <
+  | $z=$             | ^show^ suggested words                     | <
+  | $zg$             | ^add^ current word as %good% word            | <
+  | $zw$             | ^add^ current word as %wrong% word           | <
+
+# Misc > Folding
+
+  • Folding can be useful for visual <
+  • There're different folding strategies: manual, indent, expr, syntax, diff, marker <
+  • $expr$ is more useful and flexible in general <
+
+  | Command | Description                        | <
+  | ------- | ---------------------------------- |
+  | $zi$      | ^enable/disable^ folding             | <
+  | $za$      | ^toggle^ current fold                | <
+  | $zR$      | ^open^ all folds                     | <
+  | $zM$      | ^close^ all folds                    | <
+  | $zC$      | ^close^ current fold %recursively%     | <
+  | $zv$      | ^open^ minimal folds to show cursor  | <
+  | $zj$      | ^move^ %down% to top of next fold      | <
+  | $zk$      | ^move^ %up% to bottom of previous fold | <
+
 # Misc > Miscellaneous command
 
   | Command  | Description                          | <
