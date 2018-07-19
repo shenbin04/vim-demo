@@ -64,9 +64,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   ## Use Docker Image <
     • Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) <
-    • Run $docker run -it --rm soweyln/vim$ <
+    • Run $docker run -it --rm --name vim soweyln/vim$ to run image <
       ▸ Run $vim -u vimrc.min$ to use minimal config <
       ▸ Run $vim$ to use full config <
+      ▸ Run $<C-c>$ to exit (we will lost all changes) <
+      ▸ Run $<C-p><C-q>$ to detach <
+      ▸ Run $docker attach vim$ to attach again <
 
 # How to Start?
 
