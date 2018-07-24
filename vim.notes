@@ -62,7 +62,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   ## Use Docker Image <
     • Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) <
-    • Run $docker run -it --rm --name vim soweyln/vim$ to run image <
+    • Run $docker run -it --rm --name vim shenbin04/vim$ to run image <
       ▸ Run $vim -u vimrc.min$ to use minimal config <
       ▸ Run $vim$ to use full config <
       ▸ Run $<C-c>$ to exit (we will lost all changes) <
