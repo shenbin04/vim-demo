@@ -4,8 +4,8 @@ $MASTER VIM THE PRACTICAL WAY$
 
 # About
 
-  • Covers Vim $essentials$ <
-  • Covers more $advanced$ Vim <
+  • Covers $essential$ Vim <
+  • Covers $advanced$ Vim <
   • Covers many $useful tips$ <
   • $Helps$ you to be a Vim master <
   • Does $NOT$ make you a Vim master ($Practice$!) <
@@ -25,35 +25,33 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Why Vim?
 
   ## Efficiency <
-    • No mouse
-    • No ambiguity
-    • Powerful modal editing
-    • Designed for DRY (_Don't Repeat Yourself_)
+    • No mouse, no ambiguity <
+    • Powerful modal editing <
+    • Designed for DRY (_Don't Repeat Yourself_) <
 
   ## Performance <
-    • Fast
-    • Lightweight
+    • Fast & lightweight <
 
   ## Customization <
-    • Config
-    • Plugin
-    • Script
-    • Integration
+    • Config <
+    • Plugin <
+    • Script <
+    • Integration <
 
   ## Documentation <
-    • Comprehensive builtin documentation
+    • Comprehensive builtin documentation <
 
 # How to Start?
 
   ## Touch Typing <
     • The foundation <
-    • Practice more for numbers and special characters
+    • Practice more for $numbers and special characters$ <
 
   ## Vimtutor <
     • $ vimtutor <
 
   ## Minimal Config <
-    • Minimal %.vimrc% config to start with
+    • Minimal $.vimrc$ config to start with <
 
     {{{vim " .vimrc
     set nocompatible
@@ -138,19 +136,19 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # Contents
 
-  • Modes
-  • Move
-  • Edit
-  • Visual
-  • Command
-  • Repeat
-  • Search
-  • Files
-  • Misc
-  • Config
-  • Plugin
-  • Script
-  • Thanks
+  • Modes <
+  • Move <
+  • Edit <
+  • Visual <
+  • Command <
+  • Repeat <
+  • Search <
+  • Files <
+  • Misc <
+  • Config <
+  • Plugin <
+  • Script <
+  • Thanks <
 
 # Modes
 
