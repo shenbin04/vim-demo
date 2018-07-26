@@ -69,6 +69,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
       ▸ Run $<C-p><C-q>$ to detach <
       ▸ Run $docker attach vim$ to attach again <
 
+  ## Use Vim Config <
+    • Run $git clone https://github.com/soweyln/vim-config.git ~/.vim$ <
+    • Run $cd ~/.vim && make install$ <
+
 # How to Start?
 
   • The very $essential commands$ to get started <
@@ -265,18 +269,18 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • More useful to $navigate$ rather than position
   • Harder to foresee the exact position
 
-  | Command | Description                                                  | <
-  | ------- | ------------------------------------------------------------ |
-  | $<C-d>$   | ^move^ $cursor$ %half page down%                                   | <
-  | $<C-u>$   | ^move^ $cursor$ %half page up%                                     | <
-  | $<C-f>$   | ^scroll^ $window$ %one page down%                                  | <
-  | $<C-b>$   | ^scroll^ $window$ %one page up%                                    | <
-  | $H$       | ^move^ $cursor$ to the %"top"% of $window$                           | <
-  | $M$       | ^move^ $cursor$ to the %middle% of $window$                          | <
-  | $L$       | ^move^ $cursor$ to the %"bottom"% of $window$                        | <
-  | $zt$      | ^scroll^ $window$ to make current line to the %"top"% of $window$    | <
-  | $zz$      | ^scroll^ $window$ to make current line to the %"middle"% of $window$ | <
-  | $z-$      | ^scroll^ $window$ to make current line to the %"bottom"% of $window$ | <
+  | Command  | Description                                                  | <
+  | -------- | ------------------------------------------------------------ |
+  | $<C-d>$    | ^move^ $cursor$ %half page down%                                   | <
+  | $<C-u>$    | ^move^ $cursor$ %half page up%                                     | <
+  | $<C-f>$    | ^scroll^ $window$ %one page down%                                  | <
+  | $<C-b>$    | ^scroll^ $window$ %one page up%                                    | <
+  | $H$        | ^move^ $cursor$ to the %"top"% of $window$                           | <
+  | $M$        | ^move^ $cursor$ to the %middle% of $window$                          | <
+  | $L$        | ^move^ $cursor$ to the %"bottom"% of $window$                        | <
+  | $zt$,$z<CR>$ | ^scroll^ $window$ to make current line to the %"top"% of $window$    | <
+  | $zz$,$z.$    | ^scroll^ $window$ to make current line to the %"middle"% of $window$ | <
+  | $zb$,$z-$    | ^scroll^ $window$ to make current line to the %"bottom"% of $window$ | <
 
 # Move > Move by object
 
@@ -325,6 +329,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $m${mark} | ^add^ a $mark$                              | <
   | $`${mark} | ^goto^ a $mark$ (%exact position%)            | <
   | $'${mark} | ^goto^ a $mark$ (%first non-blank character%) | <
+  | $:marks$  | ^list^ $marks$                              | <
 
   | Marks | Description                              | <
   | ----- | ---------------------------------------- |
@@ -456,8 +461,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     | $"$       | $double quotes$  | <
     | $`$       | $backticks$      | <
     | $[$,$]$     | $brackets$       | <
-    | $($,$)$     | $parentheses$    | <
-    | ${$,$}$     | $braces$         | <
+    | $($,$)$,$b$   | $parentheses$    | <
+    | ${$,$}$,$B$   | $braces$         | <
     | $<$,$>$     | $angle brackets$ | <
 
   • $Custom Text Objects$ <
