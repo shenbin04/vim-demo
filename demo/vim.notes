@@ -70,7 +70,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
       ▸ Run $docker attach vim$ to attach again <
 
   ## Use Vim Config <
-    • Run $git clone https://github.com/soweyln/vim-config.git ~/.vim$ <
+    • Run $git clone https://github.com/shenbin04/vim-config.git ~/.vim$ <
     • Run $cd ~/.vim && make install$ <
 
 # How to Start?
