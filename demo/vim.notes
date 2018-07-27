@@ -22,25 +22,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   TT   EEEE X   X   TT       EEEE DDD  III   TT    OOO  R  RR
 }}}
 
-# Why Vim?
-
-  ## Efficiency <
-    • No mouse, no ambiguity <
-    • Powerful modal editing <
-    • Designed for DRY (_Don't Repeat Yourself_) <
-
-  ## Performance <
-    • Fast & lightweight <
-
-  ## Customization <
-    • Config <
-    • Plugin <
-    • Script <
-    • Integration <
-
-  ## Documentation <
-    • Comprehensive builtin documentation <
-
 # How to Start?
 
   ## Touch Typing <
@@ -75,14 +56,20 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # How to Start?
 
+  • Vim has different modes: <
+    ▸ Vim is in $Normal$ mode when it launches (typing in this mode is not what we normally expect). <
+    ▸ Press $i$ to enter $Insert$ mode and we can start typing. <
+
+  • How to quit Vim? <
+    ▸ Press $<ESC>$ (twice or more), type $:q$ and press $<ENTER>$ <
+
+# How to Start?
+
   • The very $essential commands$ to get started <
 
   | Command          | Description                                 | <
   | ---------------- | ------------------------------------------- |
   | $h$, $j$, $k$, $l$       | ^move^ %left%, %down%, %up%, %right%                  | <
-  | :w               | ^write^ to $file$                               | <
-  | :q               | ^quit^ $window$                                 | <
-  | :q!              | ^quit^ $window$ (%discard changes%)               | <
   | :e {file}        | ^edit^ $file$ in window                         | <
   | :e {dir}         | ^open^ $dir$ in file browser                    | <
   | $w$                | ^move^ to the %next% $start of word$              | <
@@ -91,7 +78,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $0$                | ^move^ to the $beginning of line$               | <
   | $gg$               | ^move^ to the $first line$                      | <
   | $G$                | ^move^ to the $last line$                       | <
-  | [%n%]$gg$            | ^move^ to $line$ %n%                              | <
+  | [%n%]$gg$,[%n%]$G$       | ^move^ to $line$ %n%                              | <
   | $<C-d>$            | ^move^ $half page$ %down%                         | <
   | $<C-u>$            | ^move^ $half page$ %up%                           | <
   | $i$                | ^insert^ %before%                               | <
@@ -103,6 +90,9 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $<C-r>$            | ^redo^ $last edit$                              | <
   | $yy$               | ^yank^ $current line$                           | <
   | $p$                | ^paste^ %after%                                 | <
+  | :w               | ^write^ to $file$                               | <
+  | :q               | ^quit^ $window$                                 | <
+  | :q!              | ^quit^ $window$ (%discard changes%)               | <
   | $/${pattern}$<CR>$   | ^search^ %forward% for ${pattern}$                | <
   | $:%s$/old/new/[gc] | ^substitute^ in $buffer$                        | <
 
@@ -120,15 +110,33 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:h$elp $x$           | ^open^ $help$ for $x$ in %Normal% mode          | <
   | $:h$elp $v_x$         | ^open^ $help$ for $x$ in %Visual% mode          | <
   | $:h$elp $i_x$         | ^open^ $help$ for $x$ in %Insert% mode          | <
-  | $:h$elp $:x$          | ^open^ $help$ for $x$ in %Command-line% mode    | <
+  | $:h$elp $:x$          | ^open^ $help$ for $x$ in %Command-line% command | <
   | $:h$elp $c_x$         | ^open^ $help$ for $x$ in %Command-line% editing | <
   | $:h$elp $-x$          | ^open^ $help$ for $x$ for %Command Argument%    | <
   | $:h$elp $'x'$         | ^open^ $help$ for $x$ for %Option%              | <
   | $:h$elp $/x$          | ^open^ $help$ for $x$ for %Regex%               | <
-  | $:helpt$ags {$dir$}   | ^generate^ $help tags$ for $dir$              | <
 
-  • Be sure to check out $:h help-context$ and $:h help-summary$ <
   • Use $<Tab>$ to autocomplete <
+  • Check out $:h help-context$ and $:h help-summary$ <
+
+# Why Vim?
+
+  ## Efficiency <
+    • No mouse, no ambiguity <
+    • Powerful modal editing <
+    • Designed for DRY (_Don't Repeat Yourself_) <
+
+  ## Performance <
+    • Fast & lightweight <
+
+  ## Customization <
+    • Config <
+    • Plugin <
+    • Script <
+    • Integration <
+
+  ## Documentation <
+    • Comprehensive builtin documentation <
 
 # Key Takeaways
 
