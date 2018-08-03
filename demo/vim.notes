@@ -195,8 +195,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # Move > Move by direction
 
-  • $h/j/k/l$ can be repeated by $count$ <
-
   | Command | Description               | <
   | ------- | ------------------------- |
   | [%n%]$h$    | ^move^ %n% $character(s)$ %left%  | <
@@ -204,11 +202,13 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | [%n%]$k$    | ^move^ %n% $line(s)$ %up%         | <
   | [%n%]$l$    | ^move^ %n% $character(s)$ %right% | <
 
+  • $h/j/k/l$ can be repeated by $count$ <
+
 # Move > Move by word
 
   • A $word$ is a sequence of letters, digits, understores or other non-blank characters. <
-  • It can be customized with $iskeyword$.
-  • Move by $word$ is useful and much faster than move by single character.
+  • It can be customized with $iskeyword$. <
+  • Move by $word$ is useful and much faster than move by single character. <
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
@@ -220,7 +220,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Move > Move by WORD
 
   • A $WORD$ is a sequence of $non-blank characters$ separated by white space. <
-  • Move by $WORD$ is preferred in certain cases.
+  • Move by $WORD$ is preferred in certain cases. <
 
   | Command | Description                            | <
   | ------- | -------------------------------------- |
@@ -243,7 +243,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Move > Move in line by finding character
 
   • Move using $f$, $t$ is a more precise way. <
-  • Be aware of the $choice$ of {c}.
+  • Be aware of the $choice$ of {c}. <
 
   | Command | Description                                                      | <
   | ------- | ---------------------------------------------------------------- |
@@ -264,18 +264,19 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   • Use $gg$ or $G$ to move to line <
 
-  | Command | Description            | <
-  | ------- | ---------------------- |
-  | $gg$      | ^move^ to the $first line$ | <
-  | $G$       | ^move^ to the $last line$  | <
-  | [%n%]$gg$   | ^move^ to $line$ %n%       | <
-  | [%n%]$G$    | ^move^ to $line$ %n%       | <
+  | Command | Description                   | <
+  | ------- | ----------------------------- |
+  | $gg$      | ^move^ $cursor$ to the %first line% | <
+  | $G$       | ^move^ $cursor$ to the %last line%  | <
+  | [%n%]$gg$   | ^move^ $cursor$ to $line$ %n%         | <
+  | [%n%]$G$    | ^move^ $cursor$ to $line$ %n%         | <
+  | $:{n}$    | ^move^ $cursor$ to $line$ %n%         | <
 
 # Move > Move by page
 
   • Move faster by $page$ <
-  • More useful to $navigate$ rather than position
-  • Harder to foresee the exact position
+  • More useful to $navigate$ rather than position <
+  • Harder to interpret the exact position <
 
   | Command  | Description                                                  | <
   | -------- | ------------------------------------------------------------ |
@@ -304,16 +305,16 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Move > Move by search
 
   • We can also use pattern $search$ to move around <
-  • More in $Search$ section
+  • More in $Search$ section <
 
   | Command        | Description                           | <
   | -------------- | ------------------------------------- |
-  | $*$              | ^search^ %forward% for $word under cursor$  | <
-  | $#$              | ^search^ %backward% for $word under cursor$ | <
+  | [%n%]$*$           | ^search^ %forward% for $word under cursor$  | <
+  | [%n%]$#$           | ^search^ %backward% for $word under cursor$ | <
   | $/${pattern}$<CR>$ | ^search^ %forward% for ${pattern}$          | <
   | $?${pattern}$<CR>$ | ^search^ %backward% for pattern ${pattern}$ | <
-  | $n$              | ^move^ to the %next% $match$                | <
-  | $N$              | ^move^ to the %previous% $match$            | <
+  | [%n%]$n$           | ^move^ to the %next% $match$                | <
+  | [%n%]$N$           | ^move^ to the %previous% $match$            | <
 
 # Move > Move by match
 
@@ -330,7 +331,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Move > Move by mark
 
   • Mark is useful for $remember$ a location <
-  • Take advantage of $special marks$
+  • Take advantage of $special marks$ <
 
   | Command | Description                             | <
   | ------- | --------------------------------------- |
@@ -357,11 +358,11 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   • $jumplist$ maintains jumps history, we can use it to jump back and forth <
 
-  | Command | Description                        | <
-  | ------- | ---------------------------------- |
-  | $<C-o>$   | ^jump^ to %older% position in $jumplist$ | <
-  | $<C-i>$   | ^jump^ to %newer% position in $jumplist$ | <
-  | $:jumps$  | ^list^ $jumps history$                 | <
+  | Command  | Description                        | <
+  | -------- | ---------------------------------- |
+  | [%n%]$<C-o>$ | ^jump^ to %older% position in $jumplist$ | <
+  | [%n%]$<C-i>$ | ^jump^ to %newer% position in $jumplist$ | <
+  | $:jumps$   | ^list^ $jumps history$                 | <
 
 # Move > Move by changes
 
@@ -369,14 +370,14 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command  | Description                          | <
   | -------- | ------------------------------------ |
-  | $g;$       | ^jump^ to %older% position in $changelist$ | <
-  | $g,$       | ^jump^ to %newer% position in $changelist$ | <
+  | [%n%]$g;$    | ^jump^ to %older% position in $changelist$ | <
+  | [%n%]$g,$    | ^jump^ to %newer% position in $changelist$ | <
   | $gi$       | ^insert^ at $last insert position$       | <
   | $:changes$ | ^list^ $changes history$                 | <
 
 # Edit > Edit in Normal mode
 
-  • Basic commands to edit text in $Normal$ mode only <
+  • Basic commands to edit text in $Normal$ mode <
 
   | Command        | Description                        | <
   | -------------- | ---------------------------------- |
@@ -390,7 +391,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Edit > Enter Insert mode
 
   • There are various ways to ^enter^ $Insert$ mode <
-  • Many of them have additional move benefits.
+  • Many of them have additional move benefits. <
 
   | Command | Description                             | <
   | ------- | --------------------------------------- |
@@ -401,7 +402,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $o$       | ^insert^ %below% $line$                       | <
   | $O$       | ^insert^ %above% $line$                       | <
   | $s$       | ^change^ %current% $character$                | <
-  | $C$       | ^change^ %current% $line$                     | <
+  | $C$       | ^change^ %until% $end of line$                | <
   | $cc$      | ^change^ %current% $line$                     | <
 
 # Edit > Edit in Insert mode
@@ -415,7 +416,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $<DEL>$          | ^delete^ %right%                                 | <
   | $<C-w>$          | ^delete^ %left% $a word$                           | <
   | $<C-u>$          | ^delete^ %left to% $first non-blank word$          | <
-  | $<C-r>${reg}     | ^insert^ $register {reg}$                      | <
+  | $<C-r>${reg}     | ^insert^ $register {reg}$                        | <
   | $<C-r>=$         | ^insert^ $eval result of an expression$          | <
   | $<C-v>${c}       | ^insert^ ${c}$ %literally%                         | <
   | $<C-k>${digraph} | ^insert^ ${digraph}$                             | <
@@ -426,7 +427,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   $Count$ + ^Operator^ + %Motion% <
   • $Count$: an arbitrary number (_how many_) <
   • ^Operator^: an action (_what_) <
-  • %Motion%: a descriptive (_where_) <
+  • %Motion%: a descriptive (_how_) <
 
 # Edit > Operator
 
@@ -440,21 +441,21 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $=$       | ^auto indent^  | <
   | $>$       | ^indent^ %right% | <
   | $<$       | ^indent^ %left%  | <
-  | $~$       | ^swap case^    | <
+  | $~$,$g~$    | ^swap case^    | <
   | $gu$      | ^lower case^   | <
   | $gU$      | ^upper case^   | <
 
 # Edit > Motion
 
-  • %Motion%: a descriptive (_where_) <
-    ◦ $All move commands$ mentioned before (_almost_) <
-    ◦ $Text Object$ <
+  • %Motion%: a descriptive (_how_) <
+    ▸ $All move commands$ mentioned before (_almost_) <
+    ▸ $Text Object$ <
 
 # Edit > Text Object
 
   • $Selection Mode$ <
-    ◦ $i$: %inside% (exclusive)
-    ◦ $a$: %around% (inclusive)
+    ▸ $i$: %inside% (exclusive) <
+    ▸ $a$: %around% (inclusive) <
 
   • $Text Objects$ <
 
@@ -484,12 +485,13 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command | Description             | <
   | ------- | ----------------------- |
-  | $daw$     | ^delete^ %around% $word$      | <
+  | $dw$      | ^delete^ %by% $word$          | <
+  | $diw$     | ^delete^ %inside% $word$      | <
   | $dap$     | ^delete^ %around% $paragraph$ | <
   | $cib$     | ^change^ %inside% $()$        | <
   | $cit$     | ^change^ %inside% $tag$       | <
   | $ct,$     | ^change^ %until% $,$          | <
-  | $yaB$     | ^yank^ %around% ${}$          | <
+  | $diB$     | ^delete^ %inside% ${}$        | <
 
 # Edit > Registers
 
@@ -527,7 +529,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 # Edit > Yank & Put
 
   • Yank is "Copy" in Vim <
-  • Put is "Paste" in Vim
+  • Put is "Paste" in Vim <
 
   | Command           | Description               | <
   | ----------------- | ------------------------- |
@@ -572,12 +574,80 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command               | Description                                 | <
   | --------------------- | ------------------------------------------- |
+  | $:undol$ist             | ^show^ $undo list$                              | <
   | [%n%]$g-$                 | ^go to^ %older% $state$                           | <
   | [%n%]$g+$                 | ^go to^ %newer% $state$                           | <
   | $:ea$rlier {%n%}          | ^go to^ %older% $state$                           | <
   | $:ea$rlier {%n%}%s/m/h/d/f% | ^go to^ %older% $state$ about certain time %before% | <
   | $:lat$er {%n%}            | ^go to^ %newer% $state$                           | <
   | $:lat$er {%n%}%s/m/h/d/f%   | ^go to^ %newer% $state$ about certain time %after%  | <
+
+# Command-line > Ex Command
+
+  • Use $:$ to initiate the command and $<CR>$ to execute <
+
+  | Command      | Description   | <
+  | ------------ | ------------- |
+  | $:$%{cmd}%       | ^enter^ $command$ | <
+  | $:e$dit {file} | ^edit^ $file$     | <
+  | $:w$rite       | ^write^ to $file$ | <
+  | $:so$urce      | ^source^ $script$ | <
+
+# Command-line > Ex Command History
+
+  • Quickly access to command history <
+
+  | Command      | Description                                       | <
+  | ------------ | ------------------------------------------------- |
+  | $:$%{cmd}%$<UP>$   | ^complete^ %previous matched% $command$ on $prefix$       | <
+  | $:$%{cmd}%$<DOWN>$ | ^complete^ %next matched% $command$ on $prefix$           | <
+  | $:$%{cmd}%$<C-p>$  | ^complete^ %previous% $command$                         | <
+  | $:$%{cmd}%$<C-n>$  | ^complete^ %next% $command$                             | <
+  | $q:$           | ^show^ $command-line window$                          | <
+  | $<C-f>$        | ^show^ $command-line window$ (from command-line mode) | <
+
+# Command-line > Ex Command for editing
+
+  • Ex commands for editing <
+
+  | Command                             | Description                          | <
+  | ----------------------------------- | ------------------------------------ |
+  | $:$[%range%]$d$elete [$reg$]                | ^delete^ %range% to $reg$                  | <
+  | $:$[%range%]$y$ank [$reg$]                  | ^yank^ %range% to $reg$                    | <
+  | $:$[%line%]$pu$t [$reg$]                    | ^put^ $reg$ after %line%                   | <
+  | $:$[%range%]$co$py {$line$}                 | ^copy^ %range% after $line$                | <
+  | $:$[%range%]$t$ {$line$}                    | ^copy^ %range% after $line$                | <
+  | $:$[%range%]$m$ove {$line$}                 | ^move^ %range% after $line$                | <
+  | $:$[%range%]$j$oin                        | ^join^ $lines$ in %range%                  | <
+  | $:norm$al[%!%] {$cmd$}                    | ^run^ normal command                   | <
+  | $:$[%range%]$s$ubstitute/$pattern$/new/[gc] | ^substitute^ in %range% matching $pattern$ | <
+  | $:$[%range%]$g$lobal/$pattern$/[$cmd$]        | ^run^ $cmd$ in %range% matching $pattern$    | <
+
+# Command-line > Ex Command range
+
+  • What is a $range$ ? <
+
+  | Command          | Description           | <
+  | ---------------- | --------------------- |
+  | $:%n%$               | $line$ %n%                | <
+  | $:+%n%$              | the %next nth% $line$     | <
+  | $:-%n%$              | the %previous nth% $line$ | <
+  | $:.$               | %current% $line$          | <
+  | $:0$               | %first% $line$            | <
+  | $:$$               | %last% $line$             | <
+  | $:%$               | %all% $lines$             | <
+  | $:/{pattern}/${%+1%} | %matched% $line$          | <
+  | $:${%start%}$,${%end%}   | from %start% to %end%     | <
+
+# Command-line > Ex Command shell
+
+  • Running shell in Vim is handy <
+
+  | Command         | Description                        | <
+  | --------------- | ---------------------------------- |
+  | $:!${$cmd$}         | ^run^ $shell cmd$                      | <
+  | $:!python %$      | ^run^ $python$ with current file       | <
+  | $:$[%range%]$r!${$cmd$} | ^run^ $cmd$ and insert output to %range% | <
 
 # Visual > Enter Visual mode
 
@@ -615,72 +685,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $A$       | ^append^ %after%    | <
 
   • $^Operator^ + %Motions%$ is typically favorable over $Visual selection$ <
-
-# Command-line > Ex Command
-
-  • Use $:$ to initiate the command and $<CR>$ to execute <
-
-  | Command      | Description   | <
-  | ------------ | ------------- |
-  | $:$%{cmd}%       | ^enter^ $command$ | <
-  | $:e$dit {file} | ^edit^ $file$     | <
-  | $:w$rite       | ^write^ to $file$ | <
-  | $:so$urce      | ^source^ $script$ | <
-
-# Command-line > Ex Command History
-
-  • Quickly access to command history <
-
-  | Command      | Description                                       | <
-  | ------------ | ------------------------------------------------- |
-  | $:$%{cmd}%$<UP>$   | ^complete^ %previous matched% $command$ on $prefix$       | <
-  | $:$%{cmd}%$<DOWN>$ | ^complete^ %next matched% $command$ on $prefix$           | <
-  | $:$%{cmd}%$<C-p>$  | ^complete^ %previous% $command$                         | <
-  | $:$%{cmd}%$<C-n>$  | ^complete^ %next% $command$                             | <
-  | $q:$           | ^show^ $command-line window$                          | <
-  | $<C-f>$        | ^show^ $command-line window$ (from command-line mode) | <
-
-# Command-line > Ex Command for editing
-
-  • Ex commands for editing <
-
-  | Command                             | Description                          | <
-  | ----------------------------------- | ------------------------------------ |
-  | $:$[%range%]$d$elete[$reg$]                 | ^delete^ %range% to $reg$                  | <
-  | $:$[%range%]$y$ank[$reg$]                   | ^yank^ %range% to $reg$                    | <
-  | $:$[%line%]$pu$t[$reg$]                     | ^put^ $reg$ after %line%                   | <
-  | $:$[%range%]$co$py {$line$}                 | ^copy^ %range% after $line$                | <
-  | $:$[%range%]$t$ {$line$}                    | ^copy^ %range% after $line$                | <
-  | $:$[%range%]$m$ove {$line$}                 | ^move^ %range% after $line$                | <
-  | $:$[%range%]$j$oin                        | ^join^ $lines$ in %range%                  | <
-  | $:norm$al[%!%] {$cmd$}                    | ^run^ normal command                   | <
-  | $:$[%range%]$s$ubstitute/$pattern$/new/[gc] | ^substitute^ in %range% matching $pattern$ | <
-  | $:$[%range%]$g$lobal/$pattern$/[$cmd$]        | ^run^ $cmd$ in %range% matching $pattern$    | <
-
-# Command-line > Ex Command range
-
-  • What is a $range$ ? <
-
-  | Command           | Description           | <
-  | ----------------- | --------------------- |
-  | $:%n%$                | $line$ %n%                | <
-  | $:+%n%$               | the %next nth% $line$     | <
-  | $:-%n%$               | the %previous nth% $line$ | <
-  | $:.$                | %current% $line$          | <
-  | $:^$                | %first% $line$            | <
-  | $:$$                | %last% $line$             | <
-  | $:${%start%}$,${%end%}    | from %start% to %end%     | <
-  | $:%/{/+1%,%/}/-1%${%cmd%} | use %search% and %offset% | <
-
-# Command-line > Ex Command shell
-
-  • Running shell in Vim is handy <
-
-  | Command         | Description                        | <
-  | --------------- | ---------------------------------- |
-  | $:!${$cmd$}         | ^run^ $shell cmd$                      | <
-  | $:!python %$      | ^run^ $python$ with current file       | <
-  | $:$[%range%]$r!${$cmd$} | ^run^ $cmd$ and insert output to %range% | <
 
 # Repeat > The . Command
 
@@ -723,12 +727,12 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Command        | Description                           | <
   | -------------- | ------------------------------------- |
-  | $*$              | ^search^ %forward% for $word under cursor$  | <
-  | $#$              | ^search^ %backward% for $word under cursor$ | <
+  | [%n%]$*$           | ^search^ %forward% for $word under cursor$  | <
+  | [%n%]$#$           | ^search^ %backward% for $word under cursor$ | <
   | $/${pattern}$<CR>$ | ^search^ %forward% for ${pattern}$          | <
   | $?${pattern}$<CR>$ | ^search^ %backward% for pattern ${pattern}$ | <
-  | $n$              | ^move^ to the %next% $match$                | <
-  | $N$              | ^move^ to the %previous% $match$            | <
+  | [%n%]$n$           | ^move^ to the %next% $match$                | <
+  | [%n%]$N$           | ^move^ to the %previous% $match$            | <
 
 # Search > Search in buffer
 
@@ -825,18 +829,18 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $%()$    | ^avoid capture^ match group | <
 
   • $match any repeated words$ <
-    ◦ test test <
+    ▸ test test <
     => /test test <
-    ◦ test   test <
+    ▸ test   test <
     => /%\v%test%\s+%test <
-    ◦ multiline <
+    ▸ multiline <
     => /\vtest(%\n%|\s)+test <
     => /\vtest%\_s%+test <
-    ◦ atest testb <
+    ▸ atest testb <
     => /\v%<%test\_s+test%>% <
-    ◦ test2 test2 <
+    ▸ test2 test2 <
     => /\v<%(\w+)%\_s+%\1%> <
-    ◦ test test test <
+    ▸ test test test <
     => /\v<(\w+)%(%\_s+\1>%)+% <
 
 # Search > Substitute
@@ -1275,7 +1279,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'honza/vim-snippets'$             | %snippets library%              |
   | ^Plug^ $'godlygeek/tabular'$              | %align text%                    |
   | ^Plug^ $'millermedeiros/vim-esformatter'$ | %flexible javascript formatter% |
-  | ^Plug^ $'maksimr/vim-jsbeautify'$         | %javascript formatter%          |
 
 
 # Plugin > Integration
@@ -1620,6 +1623,21 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $search$       | search for pattern           | <
   | $searchpos$    | search for pattern           | <
   | $searchpair$   | search for start-end pair    | <
+
+# Script > User Command
+
+  • $command$ => define a user command <
+    {{{vim command Hello call Hello()}}}
+    {{{vim command -nargs=1 Hello call Hello(<args>)}}}
+
+# Script > Local Mappings
+
+  • $<SID>$ => use script scope function in mapping <
+    {{{vim nnoremap <leader>h :call <SID>Hello()<CR>}}}
+
+  • $<Plug>$ => allow customize mapping for commands
+    {{{vim noremap <Plug>Hello :Hello<CR>}}}
+    {{{vim nmap <leader>h <Plug>Hello}}}
 
 # Thanks
 
