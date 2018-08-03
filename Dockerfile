@@ -9,6 +9,6 @@ RUN git clone https://github.com/shenbin04/zsh-config.git ~/.zsh && cd ~/.zsh &&
 RUN git clone https://github.com/shenbin04/vim-config.git ~/.vim && cd ~/.vim && git checkout dc807d7 && make install
 RUN pip install --upgrade neovim
 RUN git clone https://github.com/shenbin04/vim-demo.git ~/vim
-WORKDIR ~/vim/demo
+WORKDIR /root/vim/demo
 ENV TERM=xterm-256color
 CMD zsh
