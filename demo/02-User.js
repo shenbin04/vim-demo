@@ -26,3 +26,5 @@ User.propTypes = {
 }
 
 export default User
+
+// vim:ts=2:sw=2:nu:rnu

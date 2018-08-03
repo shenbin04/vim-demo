@@ -46,3 +46,5 @@ libuv is a modern multi-platform library with functions to perform common system
 All code supporting embedded scripting language interpreters will be replaced by a new plugin system that supports extensions written in any programming language. Compatibility layers will be provided for legacy Vim plugins written in some of the currently supported scripting languages such as Python or Ruby. Most plugins should work on Neovim with little modification, if any.
 
 Moreover, GUIs are implemented as plugins, decoupled from the Neovim core.
+
+// vim:nu:rnu
