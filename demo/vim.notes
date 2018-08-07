@@ -723,8 +723,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • Append ; to all lines? <
     => $$$$a;$ + $.$ <
     => $A;$ + $.$ <
-    => $qaA;<ESC>j$ + $[n]@a$ <
+    => $qaA;<ESC>jq$ + $[n]@a$ <
     => $$$$<C-v>[n]jA;$ <
+
+  • Convert rss feed to markdown? <
 
 # Search > Search in buffer
 
@@ -1314,6 +1316,8 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • Vim is powerful out of the box <
   • Vim is even more powerful with $config$ and $plugins$ <
   • Vim shines more with $scripting$ <
+  • $Usability$ over elegance <
+  • $Perfectionism$ is for plugin <
 
 # Script > Print
 
