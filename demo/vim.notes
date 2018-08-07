@@ -52,7 +52,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   ## Use Vim Config <
     • Run $git clone https://github.com/shenbin04/vim-config.git ~/.vim$ <
-    • Run $cd ~/.vim && make install$ <
+    • Run $cd ~/.vim && ./install.sh$ <
 
 # How to Start?
 
@@ -134,6 +134,11 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     • Plugin <
     • Script <
     • Integration <
+
+  ## Ubiquitousness <
+    • Available in all OS <
+    • Works well for all languages <
+    • SSH
 
   ## Documentation <
     • Comprehensive builtin documentation <
