@@ -1651,6 +1651,32 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
     {{{vim noremap <Plug>Hello :Hello<CR>}}}
     {{{vim nmap <leader>h <Plug>Hello}}}
 
+# Script > Plugin Structure
+
+  | Directory        | Description               | <
+  | ---------------- | ------------------------- |
+  | $~/.vim/colors/$   | color schemes             | <
+  | $~/.vim/plugin/$   | plugin                    | <
+  | $~/.vim/ftdetect/$ | filetype detection        | <
+  | $~/.vim/ftplugin/$ | filetype plugin           | <
+  | $~/.vim/syntax/$   | filetype syntax highlight | <
+  | $~/.vim/indent/$   | filetype indent           | <
+  | $~/.vim/after/$    | loaded after /plugin      | <
+  | $~/.vim/autoload/$ | lazyload code             | <
+  | $~/.vim/doc/$      | documentation             | <
+
+# Script > Case Study
+
+  • Copy to system clipboard <
+  • Toggle fullscreen <
+  • Switch between related files <
+  • Snapshot file syntax
+  • Javascript function
+  • Javascript formating imports and jsx
+  • Grep <
+  • Run tests <
+  • Presenting <
+
 # Thanks
 
 {{{ascii
