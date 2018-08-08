@@ -156,10 +156,10 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • Modes <
   • Move <
   • Edit <
-  • Visual <
   • Command <
-  • Repeat <
   • Search <
+  • Visual <
+  • Repeat <
   • Files <
   • Misc <
   • Config <
@@ -654,82 +654,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | $:!python %$      | ^run^ $python$ with current file       | <
   | $:$[%range%]$r!${$cmd$} | ^run^ $cmd$ and insert output to %range% | <
 
-# Visual > Enter Visual mode
-
-  • There are three ways to enter slightly different $Visual$ mode <
-
-  | Command | Description                      | <
-  | ------- | -------------------------------- |
-  | $v$       | ^switch to^ %normal% $Visual$ mode     | <
-  | $V$       | ^switch to^ %line-wise% $Visual$ mode  | <
-  | $<C-v>$   | ^switch to^ %block-wise% $Visual$ mode | <
-
-  • These commands can be used to ^switch^ between different modes as well <
-
-  • We can ^reselect^ the $last visual selection$ using $gv$ <
-
-# Visual > Visual mode selection
-
-  • How can we select in $Visual$ mode? <
-
-  | Command  | Description                              | <
-  | -------- | ---------------------------------------- |
-  | ${motion}$ | ^change^ %current end% of $visual selection$   | <
-  | $o$        | ^select^ the %other end% of $visual selection$ | <
-
-# Visual > More Visual mode
-
-  • What we can do in $Visual$ mode? <
-
-  | Command | Description     | <
-  | ------- | --------------- |
-  | $d$       | ^delete^ selected | <
-  | $y$       | ^yank^ selected   | <
-  | $c$       | ^change^ selected | <
-  | $I$       | ^insert^ %before%   | <
-  | $A$       | ^append^ %after%    | <
-
-  • $^Operator^ + %Motions%$ is typically favorable over $Visual selection$ <
-
-# Repeat > The . Command
-
-  • $.$ can ^repeat^ last change <
-  • $.$ can use $count$ <
-  • $.$ does %not% repeat command-line command <
-  • Idealy a change should be $Count$ + ^Operator^ + %Motion% <
-
-# Repeat > The . Command example
-
-  • delete word in sentence: This is no$t$ a test <
-    => $dbxx$ <
-    => $bdw$ <
-    => $daw$ <
-
-# Repeat > Macro
-
-  • Macro records all keystrokes in register and replay <
-
-  | Command    | Description            | <
-  | ---------- | ---------------------- |
-  | $q${$reg$}     | ^start^ record to $reg$    | <
-  | $q$          | ^stop^ record            | <
-  | $:reg$isters | ^show^ $registers$         | <
-  | [%n%]$@${$reg$}  | ^replay^ macro in $reg$    | <
-  | [%n%]$@@$      | ^replay^ %previous% macro  | <
-  | [%n%]$@:$      | ^replay^ %last% $Ex command$ | <
-
-# Repeat > Code Clinic
-
-  • Append ; to all lines <
-    => $$$$a;$ + $.$ <
-    => $A;$ + $.$ <
-    => $qaA;<ESC>jq$ + $[n]@a$ <
-    => $$$$<C-v>[n]jA;$ <
-
-  • Edit macro <
-
-  • Convert rss feed to markdown <
-
 # Search > Search in buffer
 
   • Recap <
@@ -890,6 +814,80 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   • :g/{/.+1,/}/-1sort <
     => sort lines inside matching braces <
     => {{{txt$:g/\v\{$\n\zs\_[^{]{-,}\ze^\s*\}/.+1,/}/-1sort}}}
+
+# Visual > Enter Visual mode
+
+  • There are three ways to enter slightly different $Visual$ mode <
+
+  | Command | Description                      | <
+  | ------- | -------------------------------- |
+  | $v$       | ^switch to^ %normal% $Visual$ mode     | <
+  | $V$       | ^switch to^ %line-wise% $Visual$ mode  | <
+  | $<C-v>$   | ^switch to^ %block-wise% $Visual$ mode | <
+
+  • These commands can be used to ^switch^ between different modes as well <
+
+  • We can ^reselect^ the $last visual selection$ using $gv$ <
+
+# Visual > Visual mode selection
+
+  • How can we select in $Visual$ mode? <
+
+  | Command  | Description                              | <
+  | -------- | ---------------------------------------- |
+  | ${motion}$ | ^change^ %current end% of $visual selection$   | <
+  | $o$        | ^select^ the %other end% of $visual selection$ | <
+
+# Visual > More Visual mode
+
+  • What we can do in $Visual$ mode? <
+
+  | Command | Description     | <
+  | ------- | --------------- |
+  | $d$       | ^delete^ selected | <
+  | $y$       | ^yank^ selected   | <
+  | $c$       | ^change^ selected | <
+  | $I$       | ^insert^ %before%   | <
+  | $A$       | ^append^ %after%    | <
+
+  • $^Operator^ + %Motions%$ is typically favorable over $Visual selection$ <
+
+# Repeat > The . Command
+
+  • $.$ can ^repeat^ last change <
+  • $.$ can use $count$ <
+  • $.$ does %not% repeat command-line command <
+  • Idealy a change should be $Count$ + ^Operator^ + %Motion% <
+
+# Repeat > The . Command example
+
+  • delete word in sentence: This is no$t$ a test <
+    => $dbxx$ <
+    => $bdw$ <
+    => $daw$ <
+
+# Repeat > Macro
+
+  • Macro records all keystrokes in register and replay <
+
+  | Command    | Description            | <
+  | ---------- | ---------------------- |
+  | $q${$reg$}     | ^start^ record to $reg$    | <
+  | $q$          | ^stop^ record            | <
+  | $:reg$isters | ^show^ $registers$         | <
+  | [%n%]$@${$reg$}  | ^replay^ macro in $reg$    | <
+  | [%n%]$@@$      | ^replay^ %previous% macro  | <
+  | [%n%]$@:$      | ^replay^ %last% $Ex command$ | <
+
+# Repeat > Code Clinic
+
+  • Append ; to all lines <
+    => $$$$a;$ + $.$ <
+    => $A;$ + $.$ <
+    => $qaA;<ESC>jq$ + $[n]@a$ <
+    => $$$$<C-v>[n]jA;$ <
+
+  • Convert rss feed to markdown <
 
 # Files > File
 
