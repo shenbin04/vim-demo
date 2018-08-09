@@ -6,7 +6,7 @@ RUN add-apt-repository ppa:neovim-ppa/stable
 RUN apt-get update
 RUN apt-get install -y neovim nodejs
 RUN git clone https://github.com/shenbin04/zsh-config.git ~/.zsh && cd ~/.zsh && make install
-RUN git clone https://github.com/shenbin04/vim-config.git ~/.vim && cd ~/.vim && git checkout 05f8c63 && ./install.sh
+RUN git clone https://github.com/shenbin04/vim-config.git ~/.vim && cd ~/.vim && git checkout acdcdea && ./install.sh
 RUN pip3 install --upgrade neovim
 RUN git clone https://github.com/shenbin04/vim-demo.git ~/vim
 WORKDIR /root/vim/demo
