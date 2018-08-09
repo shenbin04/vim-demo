@@ -1247,6 +1247,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'scrooloose/nerdtree'$            | %improved tree explorer%                | <
   | ^Plug^ $'majutsushi/tagbar'$              | %outline viewer%                        | <
   | ^Plug^ $'yssl/QFEnter'$                   | %ways to open a quickfix list item%     |
+  | ^Plug^ $'shime/vim-livedown'$             | %live markdown editing%                 |
 
 # Plugin > Find
 
@@ -1274,18 +1275,23 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
 # Plugin > Edit
 
-  | Plugin                                | Description                   | <
-  | ------------------------------------- | ----------------------------- |
-  | ^Plug^ $'tpope/vim-surround'$             | %add, change or delete pairs%   |
-  | ^Plug^ $'Valloric/YouCompleteMe'$         | %autocomplete engine%           |
-  | ^Plug^ $'jiangmiao/auto-pairs'$           | %auto insert pairs%             |
-  | ^Plug^ $'alvan/vim-closetag'$             | %auto close end tag%            |
-  | ^Plug^ $'tpope/vim-endwise'$              | %auto close end token%          |
-  | ^Plug^ $'tpope/vim-commentary'$           | %comment%                       |
-  | ^Plug^ $'SirVer/ultisnips'$               | %snippets engine%               |
-  | ^Plug^ $'honza/vim-snippets'$             | %snippets library%              |
-  | ^Plug^ $'godlygeek/tabular'$              | %align text%                    |
-  | ^Plug^ $'millermedeiros/vim-esformatter'$ | %flexible javascript formatter% |
+  | Plugin                           | Description                   | <
+  | -------------------------------- | ----------------------------- |
+  | ^Plug^ $'tpope/vim-surround'$        | %add, change or delete pairs%   |
+  | ^Plug^ $'Shougo/deoplete.nvim'$      | %autocomplete engine%           |
+  | ^Plug^ $'ternjs/tern_for_vim'$       | %js autocomplete source%        |
+  | ^Plug^ $'zchee/deoplete-jedi'$       | %python autocomplete source%    |
+  | ^Plug^ $'davidhalter/jedi-vim'$      | %python autocomplete source%    |
+  | ^Plug^ $'Valloric/YouCompleteMe'$    | %autocomplete engine%           |
+  | ^Plug^ $'jiangmiao/auto-pairs'$      | %auto insert pairs%             |
+  | ^Plug^ $'alvan/vim-closetag'$        | %auto close end tag%            |
+  | ^Plug^ $'tpope/vim-endwise'$         | %auto close end token%          |
+  | ^Plug^ $'tpope/vim-commentary'$      | %comment%                       |
+  | ^Plug^ $'SirVer/ultisnips'$          | %snippets engine%               |
+  | ^Plug^ $'honza/vim-snippets'$        | %snippets library%              |
+  | ^Plug^ $'godlygeek/tabular'$         | %align text%                    |
+  | ^Plug^ $'fakeezz/marvim'$            | %persist macro %                |
+  | ^Plug^ $'shenbin04/vim-esformatter'$ | %flexible javascript formatter% |
 
 
 # Plugin > Integration
@@ -1297,6 +1303,7 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'tpope/vim-fugitive'$     | %best git wrapper ever%                  |
   | ^Plug^ $'janko-m/vim-test'$       | %run your tests at the speed of thought% |
   | ^Plug^ $'benmills/vimux'$         | %tmux integration%                       |
+  | ^Plug^ $'stevearc/vim-flow-plus'$ | %flow coverage%                          |
 
 # Plugin > Misc
 
