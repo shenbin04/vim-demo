@@ -1253,7 +1253,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
 
   | Plugin                                | Description                | <
   | ------------------------------------- | -------------------------- |
-  | ^Plug^ $'ctrlpvim/ctrlp.vim'$             | %ctrlp fuzzy file finder%    | <
   | ^Plug^ $'junegunn/fzf'$                   | %fzf file finder%            | <
   | ^Plug^ $'junegunn/fzf.vim'$               | %fzf vim bindings%           | <
   | ^Plug^ $'bronson/vim-visual-star-search'$ | %search for visual selction% | <
@@ -1282,7 +1281,6 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'ternjs/tern_for_vim'$       | %js autocomplete source%        |
   | ^Plug^ $'zchee/deoplete-jedi'$       | %python autocomplete source%    |
   | ^Plug^ $'davidhalter/jedi-vim'$      | %python autocomplete source%    |
-  | ^Plug^ $'Valloric/YouCompleteMe'$    | %autocomplete engine%           |
   | ^Plug^ $'jiangmiao/auto-pairs'$      | %auto insert pairs%             |
   | ^Plug^ $'alvan/vim-closetag'$        | %auto close end tag%            |
   | ^Plug^ $'tpope/vim-endwise'$         | %auto close end token%          |
@@ -1302,19 +1300,23 @@ TTTTTT EEEE X   X TTTTTT     EEEE DDD  III TTTTTT  OOO  RRRR
   | ^Plug^ $'airblade/vim-gitgutter'$ | %git diff gutter visualizer%             |
   | ^Plug^ $'tpope/vim-fugitive'$     | %best git wrapper ever%                  |
   | ^Plug^ $'janko-m/vim-test'$       | %run your tests at the speed of thought% |
-  | ^Plug^ $'benmills/vimux'$         | %tmux integration%                       |
+  | ^Plug^ $'kassio/neoterm'$         | %neovim terminal helper%                 |
   | ^Plug^ $'stevearc/vim-flow-plus'$ | %flow coverage%                          |
 
 # Plugin > Misc
 
   | Plugin                               | Description               | <
   | ------------------------------------ | ------------------------- |
+  | ^Plug^ $'junegunn/gv.vim'$               | %faster git log navigator%  |
+  | ^Plug^ $'junegunn/vim-peekaboo'$         | %visualize registers%       |
+  | ^Plug^ $'junegunn/vim-slash$             | %search util%               |
   | ^Plug^ $'machakann/vim-highlightedyank'$ | %highlight yanked%          |
   | ^Plug^ $'xolox/vim-notes'$               | %note%                      |
   | ^Plug^ $'tpope/vim-repeat'$              | %repeat . for plugin%       |
   | ^Plug^ $'gerw/vim-HiLinkTrace'$          | %inspect syntax highlight%  |
   | ^Plug^ $'ton/vim-bufsurf'$               | %buffer history per window% |
   | ^Plug^ $'tmhedberg/SimpylFold'$          | %better python fold%        |
+  | ^Plug^ $'urbainvaes/vim-remembrall'$     | %mapping autocomplete%      |
   | ^Plug^ $'vim-scripts/L9'$                | %scripting utils%           |
   | ^Plug^ $'xolox/vim-misc'$                | %scripting utils%           |
 
